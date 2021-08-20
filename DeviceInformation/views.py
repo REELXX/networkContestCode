@@ -4,6 +4,7 @@ import time
 import numpy as np
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
+import random
 
 requests.packages.urllib3.disable_warnings()
 # if __name__ == "__main__":
@@ -15,7 +16,7 @@ headers = {
 data = {
     "grantType": "password",
     "userName": "15659299492",
-    "value": "zhenglinxinA100_"
+    "value": "zhenglinxin100"
 }
 response = requests.put(url, headers=headers, data=json.dumps(data), verify=False)
 token = response.json()['accessSession']
@@ -79,6 +80,13 @@ header = {
 res = requests.post(url, headers=header, data=json.dumps(data), verify=False)
 # 字典化
 res_dict = res.json()
+
+
+
+
+def getApMac():
+    num = random.randrange(5)
+    return res_dict["resultData"][num]['accessApMac']
 
 
 # 接入AP数据 获取到了列表数据

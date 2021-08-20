@@ -17,7 +17,6 @@ from smtplib import SMTP
 from email.mime.text import MIMEText
 from email.header import Header
 import sqlite3
-from DeviceInformation.views import getApMac
 
 """
 用户信息登录判断
@@ -57,7 +56,6 @@ def update_sql():
         # 关闭连接
         con.close()
         print('用户数据加载完成')
-
 
 update_sql()
 
@@ -157,9 +155,7 @@ CHANNELS = 1
 RATE = 16000
 RECORD_SECONDS = 5
 warn = [0]  # 0不用发告警邮件 1发告警邮件
-
-
-# user = [0]  # 1的时候跳转界面
+user = [0]  # 1的时候跳转界面
 
 
 def wav2pcm(wavfile, pcmfile, data_type=np.int16):
@@ -234,7 +230,7 @@ def voice_play(voice_str):
 
 def voice_recognition(voice_file):  # 语音识别
     keyword_warm = '检测'
-    # keyword_user = '用户'
+    keyword_user = '用户'
 
     # text_txt = json.loads(voice_file)
 
@@ -243,10 +239,10 @@ def voice_recognition(voice_file):  # 语音识别
         print('开始检测')
         # s = re.findall("\d+", voice_file)
         warn[0] = 1
-    # if keyword_user in voice_file:
-    #     user[0] = 1
-    #     print(user)
-    #     print('跳转页面')
+    if keyword_user in voice_file:
+        user[0] = 1
+        print(user)
+        print('跳转页面')
 
 
 # json_send //发送至服务器
@@ -261,32 +257,31 @@ engine = pyttsx3.init()
 
 def voice_detect(request):
     rec("1.wav")
+
     wav2pcm("1.wav", "1.pcm")
+
     with open("1.pcm", 'rb') as fp:
         file_context = fp.read()
+
     res = client.asr(file_context, 'pcm', 16000, {
         'dev_pid': 1537,
     })
 
     print(res['result'][0])  # 提取字典中 result 后信息
     res_str = res["result"][0]
-
-    print(res_str)
+    # print(user)
     voice_recognition(res_str)  # 数据处理
-
+    # 跳转到用户界面
+    # if user[0] == 1:
+    #     user[0] = 0
+    #     print("开始跳转页面")
+    #     return redirect('/touserlist')
     color = 'greenyellow'
     if warn[0] == 1:
         warning()
         warn[0] = 0
-
-        # 返回语音对应页面url
-    url = False
-    url_dict = {'用户': '/userlist.html', '设备': '/other.html', '检测': '/errorDetect.html'}
-    for i in url_dict.keys():
-        if i in res_str:
-            url = url_dict[i]
-
-    return JsonResponse({'url': url, 'voice_detect': res_str, 'color': color})
+    # print(user)
+    return JsonResponse({'voice_detect': res_str, 'color': color})
 
 
 # voice_detect(requests)  # 测试语音服务
@@ -320,7 +315,6 @@ def send_email(SMTP_host, from_addr, password, to_addrs, subject, content):
 
 def warning():
     # qq发送qq
-    apMac = getApMac()
-    mailPass = 'veqvfodwwfnhbdgd'
+
     receiver = ["943996316@qq.com"]
-    send_email("smtp.qq.com", "943996316@qq.com", mailPass, receiver, "异常告警", "发现深圳站点的" + apMac + "出现流量异常")
+    send_email("smtp.qq.com", "943996316@qq.com", "wbzsqseidgoibcgb", receiver, "异常告警", "发现深圳站点出现流量异常")

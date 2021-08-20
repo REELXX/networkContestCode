@@ -461,92 +461,6 @@
 
     <!--弹出窗口-->
     <div class="popup mfp-hide" id="popup-settings">
-        <form class="popup__form">
-
-
-            <div class="popup__user">
-                <div class="popup__title h2 ">Your Profile</div>
-                <div class="popup__title h2 "></div>
-
-
-                <div class="popup__line">
-
-                    <div class="popup__ava"><img class="popup__pic" src="../static/img/ava.png" alt=""></div>
-
-                    <div class="popup__details">
-                        <div class="popup__title h1 ">xx用户</div>
-                        <!-- 
-                            <div class="popup__btns">
-
-                            <div class="popup__loading">
-                                <input class="popup__file" type="file">
-                                <button class="popup__btn btn btn_purple">Upload New</button>
-                            </div>
-                            <button class="popup__btn btn btn_gray">Delete Avatar</button>
-                        </div> 
-                        -->
-                        <div class="popup__text">你的服务将在xxxx-xx-xx到期</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="popup__fieldset">
-
-                <div class="popup__row">
-
-                    <div class="popup__field field">
-                        <div class="field__label">用户名</div>
-                        <div class="popup__title h4 ">xxx</div>
-                        <!-- <div class="field__wrap"><input class="field__input" type="text"></div> -->
-                    </div>
-                    <div class="popup__field field">
-                        <div class="field__label">绑定邮箱</div>
-                        <div class="popup__title h4 ">xxxxxxx@xx.xxx</div>
-                        <!-- <div class="field__wrap"><input class="field__input" type="text"></div> -->
-                    </div>
-                </div>
-
-                <div class="popup__row">
-
-                    <div class="popup__field field">
-                        <div class="field__label">用户等级</div>
-                        <div class="popup__title h4 ">管理员</div>
-                        <!-- <div class="field__wrap"><input class="field__input" type="text"></div> -->
-                    </div>
-
-                    <div class="popup__field field">
-                        <div class="field__label">最近登陆IP</div>
-                        <div class="popup__title h4 ">福建厦门电信 xxx.xxx.xx.xx</div>
-                        <!-- <div class="field__wrap"><input class="field__input" type="text"></div> -->
-                    </div>
-                </div>
-
-                <div class="popup__row">
-
-                    <div class="popup__field field">
-                        <div class="field__label">所属团体</div>
-                        <div class="popup__title h4 ">开发团队</div>
-                        <!-- <div class="field__wrap"><input class="field__input" type="text"></div> -->
-                    </div>
-
-                    <div class="popup__field field">
-                        <div class="field__label">账户安全等级</div>
-                        <div class="popup__title h4 ">优</div>
-
-                        <!-- <div class="field__wrap"><input class="field__input" type="text"></div> -->
-                    </div>
-
-                </div>
-                <!-- <div class="popup__field field">
-                    <div class="field__label">反馈</div>
-                    <div class="field__wrap"><textarea class="field__textarea"></textarea></div>
-                </div>
-            </div> -->
-                <div class="popup__btns">
-                    <button class="popup__btn btn btn_purple" type="submit">续费</button>
-                    <button class="popup__btn btn btn_gray">升级</button>
-                </div>
-        </form>
     </div>
     <!-- scripts-->
     <script src="../static/js/lib/jquery.min.js"></script>
@@ -580,11 +494,7 @@
                     dataType: "json",
                     success: function (data) {
 
-                        console.log(data);
-                        if(data.url){
-                            window.location.href = data.url
-                        }
-
+                        // 后端判断语音内容，返回对应url再get跳转
                         $(".speak__info").text(data.voice_detect);
                         var deng = "<div class=\"speak__user caption\">当前设备情况</div>\n" +
                             "<i style=\"width:20px;height:20px;border-radius:50%;background-color:" + data.color + ";display: block\"></i>";
@@ -593,6 +503,258 @@
 
                 });
             }
+        });
+    });
+</script>
+<!--初始用户信息-->
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "UerinfoServlet",
+            data: {},
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                $("#popup-settings").empty();
+                var yonghu = "<form class=\"popup__form\">\n" +
+                    "\n" +
+                    "\n" +
+                    "        <div class=\"popup__user\">\n" +
+                    "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
+                    "            <div class=\"popup__title h2 \"></div>\n" +
+                    "\n" +
+                    "\n" +
+                    "            <div class=\"popup__line\">\n" +
+                    "\n" +
+                    "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
+                    "\n" +
+                    "                <div class=\"popup__details\">\n" +
+                    "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
+                    "                    <div class=\"popup__text\">你的服务将在"+data.date+"天到期</div>\n" +
+                    "                </div>\n" +
+                    "            </div>\n" +
+                    "        </div>\n" +
+                    "\n" +
+                    "        <div class=\"popup__fieldset\">\n" +
+                    "\n" +
+                    "            <div class=\"popup__row\">\n" +
+                    "\n" +
+                    "                <div class=\"popup__field field\">\n" +
+                    "                    <div class=\"field__label\">用户名</div>\n" +
+                    "                    <div class=\"popup__title h4 \">"+data.username+"</div>\n" +
+                    "                </div>\n" +
+                    "                <div class=\"popup__field field\">\n" +
+                    "                    <div class=\"field__label\">绑定邮箱</div>\n" +
+                    "                    <div class=\"popup__title h4 \">"+data.email+"</div>\n" +
+                    "                </div>\n" +
+                    "            </div>\n" +
+                    "\n" +
+                    "            <div class=\"popup__row\">\n" +
+                    "\n" +
+                    "                <div class=\"popup__field field\">\n" +
+                    "                    <div class=\"field__label\">用户等级</div>\n" +
+                    "                    <div class=\"popup__title h4 \">管理员</div>\n" +
+                    "                </div>\n" +
+                    "\n" +
+                    "                <div class=\"popup__field field\">\n" +
+                    "                    <div class=\"field__label\">最近登陆IP</div>\n" +
+                    "                    <div class=\"popup__title h4 \"> 192.168."+parseInt(Math.random()*(99+1),10)+"."+parseInt(Math.random()*(99+1),10)+"</div>\n" +
+                    "                </div>\n" +
+                    "            </div>\n" +
+                    "\n" +
+                    "            <div class=\"popup__row\">\n" +
+                    "\n" +
+                    "                <div class=\"popup__field field\">\n" +
+                    "                    <div class=\"field__label\">所属团体</div>\n" +
+                    "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
+                    "                </div>\n" +
+                    "\n" +
+                    "                <div class=\"popup__field field\">\n" +
+                    "                    <div class=\"field__label\">账户安全等级</div>\n" +
+                    "                    <div class=\"popup__title h4 \">优</div>\n" +
+                    "\n" +
+                    "                </div>\n" +
+                    "\n" +
+                    "            </div>\n" +
+                    "            <div class=\"popup__btns\">\n" +
+                    "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
+                    "                <button class=\"popup__btn btn btn_gray\"  id=\"bianji\">编辑</button>\n" +
+                    "            </div>\n" +
+                    "    </form>";
+                $("#popup-settings").append(yonghu);
+            }
+
+        });
+    });
+</script>
+<!--开始修改-->
+<script>
+    $(document).ready(function () {
+
+        $("#popup-settings").on("click","#bianji",function () {
+            $.ajax({
+                url: "UerinfoServlet",
+                data: {},
+                type: "POST",
+                dataType: "json",
+                success: function (data) {
+                    $("#popup-settings").empty();
+                    var yonghu = "<form class=\"popup__form\">\n" +
+                        "\n" +
+                        "\n" +
+                        "     <div class=\"popup__user\">\n" +
+                        "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
+                        "            <div class=\"popup__title h2 \"></div>\n" +
+                        "\n" +
+                        "\n" +
+                        "            <div class=\"popup__line\">\n" +
+                        "\n" +
+                        "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
+                        "\n" +
+                        "                <div class=\"popup__details\">\n" +
+                        "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
+                        "                    <div class=\"popup__text\">你的服务将在"+data.date+"天到期</div>\n" +
+                        "                </div>\n" +
+                        "            </div>\n" +
+                        "        </div>\n" +
+                        "\n" +
+                        "        <div class=\"popup__fieldset\">\n" +
+                        "\n" +
+                        "            <div class=\"popup__row\">\n" +
+                        "\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">用户名:</div>\n" +
+                        "                    <div class=\"popup__title h4 \"><input class='username' type='text'></div>\n" +
+                        "                </div>\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">绑定邮箱</div>\n" +
+                        "                    <div class=\"popup__title h4 \"><input class='email' type='text'></div>\n" +
+                        "                </div>\n" +
+                        "            </div>\n" +
+                        "\n" +
+                        "            <div class=\"popup__row\">\n" +
+                        "\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">用户等级</div>\n" +
+                        "                    <div class=\"popup__title h4 \">管理员</div>\n" +
+                        "                </div>\n" +
+                        "\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">最近登陆IP</div>\n" +
+                        "                    <div class=\"popup__title h4 \"> 192.168."+parseInt(Math.random()*(99+1),10)+"."+parseInt(Math.random()*(99+1),10)+"</div>\n" +
+                        "                </div>\n" +
+                        "            </div>\n" +
+                        "\n" +
+                        "            <div class=\"popup__row\">\n" +
+                        "\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">所属团体</div>\n" +
+                        "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
+                        "                </div>\n" +
+                        "\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">账户安全等级</div>\n" +
+                        "                    <div class=\"popup__title h4 \">优</div>\n" +
+                        "\n" +
+                        "                </div>\n" +
+                        "\n" +
+                        "            </div>\n" +
+                        "            <div class=\"popup__btns\">\n" +
+                        "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
+                        "                <button class=\"popup__btn btn btn_gray\" id=\"queding\">确定</button>\n" +
+                        "            </div>\n" +
+                        "    </form>";
+                    $("#popup-settings").append(yonghu);
+                }
+            });
+
+
+        });
+    });
+</script>
+<!--确定修改-->
+<script>
+    $(document).ready(function () {
+
+        $("#popup-settings").on("click","#queding",function () {
+            var username=$(".username").val();
+            var email=$(".email").val();
+            $.ajax({
+                url: "UerinfobianjiServlet",
+                data: {username:username,
+                    email:email},
+                type: "POST",
+                dataType: "json",
+                success: function (data) {
+                    $("#popup-settings").empty();
+                    var yonghu = "<form class=\"popup__form\">\n" +
+                        "\n" +
+                        "\n" +
+                        "     <div class=\"popup__user\">\n" +
+                        "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
+                        "            <div class=\"popup__title h2 \"></div>\n" +
+                        "\n" +
+                        "\n" +
+                        "            <div class=\"popup__line\">\n" +
+                        "\n" +
+                        "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
+                        "\n" +
+                        "                <div class=\"popup__details\">\n" +
+                        "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
+                        "                    <div class=\"popup__text\">你的服务将在"+data.date+"天到期</div>\n" +
+                        "                </div>\n" +
+                        "            </div>\n" +
+                        "        </div>\n" +
+                        "\n" +
+                        "        <div class=\"popup__fieldset\">\n" +
+                        "\n" +
+                        "            <div class=\"popup__row\">\n" +
+                        "\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">用户名:</div>\n" +
+                        "                    <div class=\"popup__title h4 \">"+data.username+"</div>\n" +
+                        "                </div>\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">绑定邮箱</div>\n" +
+                        "                    <div class=\"popup__title h4 \">"+data.email+"</div>\n" +
+                        "                </div>\n" +
+                        "            </div>\n" +
+                        "\n" +
+                        "            <div class=\"popup__row\">\n" +
+                        "\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">用户等级</div>\n" +
+                        "                    <div class=\"popup__title h4 \">管理员</div>\n" +
+                        "                </div>\n" +
+                        "\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">最近登陆IP</div>\n" +
+                        "                    <div class=\"popup__title h4 \"> 192.168."+parseInt(Math.random()*(99+1),10)+"."+parseInt(Math.random()*(99+1),10)+"</div>\n" +
+                        "                </div>\n" +
+                        "            </div>\n" +
+                        "\n" +
+                        "            <div class=\"popup__row\">\n" +
+                        "\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">所属团体</div>\n" +
+                        "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
+                        "                </div>\n" +
+                        "\n" +
+                        "                <div class=\"popup__field field\">\n" +
+                        "                    <div class=\"field__label\">账户安全等级</div>\n" +
+                        "                    <div class=\"popup__title h4 \">优</div>\n" +
+                        "\n" +
+                        "                </div>\n" +
+                        "\n" +
+                        "            </div>\n" +
+                        "            <div class=\"popup__btns\">\n" +
+                        "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
+                        "                <button class=\"popup__btn btn btn_gray\" id=\"bianji\">编辑</button>\n" +
+                        "            </div>\n" +
+                        "    </form>";
+                    $("#popup-settings").append(yonghu);
+                }
+            });
         });
     });
 </script>

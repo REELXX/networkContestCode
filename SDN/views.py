@@ -16,7 +16,7 @@ headers = {
 data = {
     "grantType": "password",
     "userName": "15659299492",
-    "value": "zhenglinxinA100_"
+    "value": "zhenglinxin100"
 }
 response = requests.put(url, headers=headers, data=json.dumps(data), verify=False)
 token = response.json()['accessSession']
