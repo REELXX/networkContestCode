@@ -493,8 +493,6 @@
                     type: "POST",
                     dataType: "json",
                     success: function (data) {
-
-                        // 后端判断语音内容，返回对应url再get跳转
                         $(".speak__info").text(data.voice_detect);
                         var deng = "<div class=\"speak__user caption\">当前设备情况</div>\n" +
                             "<i style=\"width:20px;height:20px;border-radius:50%;background-color:" + data.color + ";display: block\"></i>";
@@ -510,7 +508,7 @@
 <script>
     $(document).ready(function () {
         $.ajax({
-            url: "UerinfoServlet",
+            url: "/getUserInfo",
             data: {},
             type: "POST",
             dataType: "json",
@@ -530,7 +528,7 @@
                     "\n" +
                     "                <div class=\"popup__details\">\n" +
                     "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
-                    "                    <div class=\"popup__text\">你的服务将在"+data.date+"天到期</div>\n" +
+                    "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
                     "                </div>\n" +
                     "            </div>\n" +
                     "        </div>\n" +
@@ -593,7 +591,7 @@
 
         $("#popup-settings").on("click","#bianji",function () {
             $.ajax({
-                url: "UerinfoServlet",
+                url: "/getUserInfo",
                 data: {},
                 type: "POST",
                 dataType: "json",
@@ -613,7 +611,7 @@
                         "\n" +
                         "                <div class=\"popup__details\">\n" +
                         "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
-                        "                    <div class=\"popup__text\">你的服务将在"+data.date+"天到期</div>\n" +
+                        "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
                         "                </div>\n" +
                         "            </div>\n" +
                         "        </div>\n" +
@@ -680,7 +678,7 @@
             var username=$(".username").val();
             var email=$(".email").val();
             $.ajax({
-                url: "UerinfobianjiServlet",
+                url: "/infoChange",
                 data: {username:username,
                     email:email},
                 type: "POST",
@@ -701,7 +699,7 @@
                         "\n" +
                         "                <div class=\"popup__details\">\n" +
                         "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
-                        "                    <div class=\"popup__text\">你的服务将在"+data.date+"天到期</div>\n" +
+                        "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
                         "                </div>\n" +
                         "            </div>\n" +
                         "        </div>\n" +

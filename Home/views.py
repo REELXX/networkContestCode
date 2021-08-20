@@ -70,6 +70,9 @@ def admin(request):
     return render(request, 'Home/intro.html')
 
 
+nameSignIN = ""
+
+
 # 登录
 def Sign(request):
     if request.method == 'POST':
@@ -82,7 +85,7 @@ def Sign(request):
         # 登录
 
         if nameAndPasswd.get(nameSignIN) == passwordSignIN:
-            return render(request, 'Home/overview.html')
+            return render(request, 'Home/overview1.html')
             # print("密码正确")
         else:
             return render(request, 'Home/Sign_IN&UP.html')
@@ -111,25 +114,32 @@ def register(request):
 
 
 # 获得个人信息
+
 def getUserInfo(request):
     if request.method == 'POST':
         UserGetEmail = nameAndEmail.get(nameSignIN)
+
+        return JsonResponse({"username": nameSignIN, "email": UserGetEmail})
 
 
 # 修改个人信息
 def infoChange(request):
     con = sqlite3.connect('db.sqlite3')
     cur = con.cursor()
+
     if request.method == 'POST':
-        a = 0
-        b = 0
-        cur.execute('UPDATE Home_userinfo set email=? where username=? ', (b, a))
+        useName = nameSignIN
+        useNameChange = request.POST.get('username')
+        emailChange = request.POST.get('email')
+        cur.execute('UPDATE Home_userinfo set email=?,username=? where username=? ',
+                    (emailChange, useNameChange,useName))
         con.commit()
 
         # 关闭游标
         cur.close()
         # 关闭连接
         con.close()
+        return JsonResponse({"username": useNameChange, "email": emailChange})
 
 
 # 返回
