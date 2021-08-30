@@ -493,6 +493,11 @@
                     type: "POST",
                     dataType: "json",
                     success: function (data) {
+
+                        console.log(data);
+                        if(data.url){
+                            window.location.href = data.url
+                        }
                         $(".speak__info").text(data.voice_detect);
                         var deng = "<div class=\"speak__user caption\">当前设备情况</div>\n" +
                             "<i style=\"width:20px;height:20px;border-radius:50%;background-color:" + data.color + ";display: block\"></i>";
@@ -556,7 +561,7 @@
                     "\n" +
                     "                <div class=\"popup__field field\">\n" +
                     "                    <div class=\"field__label\">最近登陆IP</div>\n" +
-                    "                    <div class=\"popup__title h4 \"> 192.168."+parseInt(Math.random()*(99+1),10)+"."+parseInt(Math.random()*(99+1),10)+"</div>\n" +
+                    "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
                     "                </div>\n" +
                     "            </div>\n" +
                     "\n" +
@@ -639,7 +644,7 @@
                         "\n" +
                         "                <div class=\"popup__field field\">\n" +
                         "                    <div class=\"field__label\">最近登陆IP</div>\n" +
-                        "                    <div class=\"popup__title h4 \"> 192.168."+parseInt(Math.random()*(99+1),10)+"."+parseInt(Math.random()*(99+1),10)+"</div>\n" +
+                        "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
                         "                </div>\n" +
                         "            </div>\n" +
                         "\n" +
@@ -727,7 +732,7 @@
                         "\n" +
                         "                <div class=\"popup__field field\">\n" +
                         "                    <div class=\"field__label\">最近登陆IP</div>\n" +
-                        "                    <div class=\"popup__title h4 \"> 192.168."+parseInt(Math.random()*(99+1),10)+"."+parseInt(Math.random()*(99+1),10)+"</div>\n" +
+                        "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
                         "                </div>\n" +
                         "            </div>\n" +
                         "\n" +

@@ -1,0 +1,20 @@
+import http.client
+import ssl
+import json
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
+conn = http.client.HTTPSConnection("117.78.31.209:26335")
+
+payload = "{\"endTime\":1628507381000,\"startTime\":1628438400000,\"userMac\":\"c4-9e-d3-d2-d9-da\"}"
+
+headers = {
+    'x-auth-token': "budDCq6r1SC/t5BlOdsANs86r84bRztFIGJ2QI9eEDk=",
+    'content-type': "application/json"
+    }
+
+conn.request("POST", "/rest/campusclientwebsite/v1/journey/nodelist?=&=", payload, headers)
+
+res = conn.getresponse()
+data = res.read().decode("utf-8")
+data = json.loads(data)

@@ -5,6 +5,10 @@ import numpy as np
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 import random
+import http.client
+import ssl
+import json
+import time
 
 requests.packages.urllib3.disable_warnings()
 # if __name__ == "__main__":
@@ -82,8 +86,6 @@ res = requests.post(url, headers=header, data=json.dumps(data), verify=False)
 res_dict = res.json()
 
 
-
-
 def getApMac():
     num = random.randrange(5)
     return res_dict["resultData"][num]['accessApMac']
@@ -131,7 +133,6 @@ header = {
 }
 res1 = requests.get(url, headers=header, params={'param': json.dumps(param)}, verify=False)
 
-
 # print(res1.json())
 
 
@@ -163,9 +164,95 @@ res1 = requests.get(url, headers=header, params={'param': json.dumps(param)}, ve
 #         print(i)
 # print(a)
 
+
+# 用户旅途获取
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
+conn = http.client.HTTPSConnection("117.78.31.209:26335")
+
+payload = "{\"endTime\":1628507381000,\"startTime\":1628438400000,\"userMac\":\"c4-9e-d3-d2-d9-da\"}"
+
+headers = {
+    'x-auth-token': "budDCq6r1SC/t5BlOdsANs86r84bRztFIGJ2QI9eEDk=",
+    'content-type': "application/json"
+}
+
+conn.request("POST", "/rest/campusclientwebsite/v1/journey/nodelist?=&=", payload, headers)
+
+res = conn.getresponse()
+data = res.read().decode("utf-8")
+data = json.loads(data)
+
+a = 0
+for i in data['data']:
+    try:
+        # 时间戳处理
+        if float(i['accTime']) > 162847546100:
+            i['accTime'] = float(i['accTime']) / 1000
+        timestamp = float(i['accTime'])
+
+        timeArray = time.localtime(timestamp)
+
+        otherStyleTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
+
+        i['accTime'] = otherStyleTime
+
+    except:
+        print("失败")
+import random
+
+accTime = []
+liveTime = []
+jourDir = {}
+jourList = []
+situation = []
+pingjia = []
+color = []
+for i in range(len(data['data'])):
+
+    accTime.append(data['data'][i]['accTime'])
+
+    try:
+        liveTime.append(data['data'][i]['nodeKpi']['duration'])
+        # print(data['data'][i]['accTime'])
+        # print(liveTime)
+    except:
+        liveTime.append(0)
+    if liveTime[i] == 0 :
+        pingFen = 0
+        situation.append("接入错误")
+        color.append('#FF0000')
+        pingjia.append('差')
+    else:
+        pingFen = random.randrange(80, 100)
+        situation.append("接入成功")
+        color.append('#5dd375')
+        pingjia.append('良好')
+    jourDir = {'accTime': data['data'][i]['accTime'], 'huoyuetime': int(liveTime[i]/60),
+               'pingfen': pingFen,'situation':situation[i],'color':color[i],'pingjia':pingjia[i]}
+
+    jourList.append(jourDir)
+
+
+def getUserWay(request):
+    if request.method == 'POST':
+        usermac = request.POST.get('usermac')
+        startTime = request.POST.get('startTime')
+    return JsonResponse({
+        "usermac": usermac,
+        "startTime": startTime,
+        "Jourtable": jourList,
+    })
+
+
 def errorDetect(request):
     return render(request, 'Home/errorDetect.html')
 
 
 def userlist(request):
     return render(request, 'Home/userlist.html')
+
+
+def userJourney(request):
+    return render(request, 'Home/userJourney1.html')

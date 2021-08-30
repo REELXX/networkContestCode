@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Campaigns</title>
+  <title>站点趋势总览</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -12,22 +12,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon-16x16.png">
   <link rel="manifest" href="../static/img/site.webmanifest">
   <link rel="mask-icon" href="../static/img/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Ultimate Multipurpose HTML Dashboard Kit">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@ui8">
-  <meta name="twitter:title" content="Unity">
-  <meta name="twitter:description" content="Ultimate Multipurpose HTML Dashboard Kit">
-  <meta name="twitter:creator" content="@ui8">
-  <meta name="twitter:image" content="https://ui8-unity.herokuapp.com/img/twitter-card.jpg">
-  <meta property="og:title" content="Unity">
-  <meta property="og:type" content="Article">
-  <meta property="og:url" content="https://ui8-unity.herokuapp.com/index.html">
-  <meta property="og:image" content="https://ui8-unity.herokuapp.com/img/fb-og-image.jpg">
-  <meta property="og:description" content="Ultimate Multipurpose HTML Dashboard Kit">
-  <meta property="og:site_name" content="Unity">
-  <meta property="fb:admins" content="132951670226590">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,500;1,500&amp;display=swap"
     rel="stylesheet">
@@ -40,7 +25,8 @@
       } else {
         viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
       }
-    }</script>
+    }
+  </script>
 
 
 </head>
@@ -109,14 +95,28 @@
                   <div class="sidebar__icon"><svg class="icon icon-overview">
                       <use xlink:href="../static/img/sprite.svg#icon-overview"></use>
                     </svg></div>
-                  <div class="sidebar__text">根站点信息</div>
+                  <div class="sidebar__text">站点趋势总览</div>
+                </a>
+
+                <a class="sidebar__item" href="detail1.html">
+                  <div class="sidebar__icon"><svg class="icon icon-bag">
+                      <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
+                    </svg></div>
+                  <div class="sidebar__text">位置流量趋势</div>
                 </a>
 
                 <a class="sidebar__item" href="other.html">
                   <div class="sidebar__icon"><svg class="icon icon-bag">
                       <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
                     </svg></div>
-                  <div class="sidebar__text">站点健康评测体系</div>
+                  <div class="sidebar__text">健康评测总览</div>
+                </a>
+
+                <a class="sidebar__item" href="detail2.html">
+                  <div class="sidebar__icon"><svg class="icon icon-bag">
+                      <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
+                    </svg></div>
+                  <div class="sidebar__text">网络健康细分指标</div>
                 </a>
               </div>
 
@@ -228,20 +228,22 @@
                 <div class="search__result">
                   <div class="search__info caption-sm"></div>
                   <div class="search__list"><a class="search__item" href="#">
-                      <div class="search__preview bg-pink"><img class="search__pic" src="../static/img/figure-1.png" alt="" />
+                      <div class="search__preview bg-pink"><img class="search__pic" src="../static/img/figure-1.png"
+                          alt="" />
                       </div>
                       <div class="search__text">说明文档<svg class="icon icon-arrow-right">
                           <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
                         </svg></div>
                     </a><a class="search__item" href="#">
-                      <div class="search__preview bg-yellow"><img class="search__pic" src="../static/img/figure-4.png" alt="" />
+                      <div class="search__preview bg-yellow"><img class="search__pic" src="../static/img/figure-4.png"
+                          alt="" />
                       </div>
                       <div class="search__text">使用帮助<svg class="icon icon-arrow-right">
                           <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
                         </svg></div>
                     </a><a class="search__item" href="#">
-                      <div class="search__preview bg-blue-light"><img class="search__pic" src="../static/img/figure-3.png"
-                          alt="" /></div>
+                      <div class="search__preview bg-blue-light"><img class="search__pic"
+                          src="../static/img/figure-3.png" alt="" /></div>
                       <div class="search__text">其他<svg class="icon icon-arrow-right">
                           <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
                         </svg></div>
@@ -263,9 +265,10 @@
 
 
                     <a class="notifications__item" href="notifications.html">
-                      <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png" alt="" />
-                        <div class="notifications__status bg-blue"><img class="notifications__pic" src="../static/img/chat.svg"
-                            alt="" /></div>
+                      <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
+                          alt="" />
+                        <div class="notifications__status bg-blue"><img class="notifications__pic"
+                            src="../static/img/chat.svg" alt="" /></div>
                       </div>
                       <div class="notifications__details">
                         <div class="notifications__line">
@@ -278,9 +281,10 @@
 
 
                     </a><a class="notifications__item" href="notifications.html">
-                      <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png" alt="" />
-                        <div class="notifications__status bg-green"><img class="notifications__pic" src="../static/img/bag.svg"
-                            alt="" /></div>
+                      <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
+                          alt="" />
+                        <div class="notifications__status bg-green"><img class="notifications__pic"
+                            src="../static/img/bag.svg" alt="" /></div>
                       </div>
                       <div class="notifications__details">
                         <div class="notifications__line">
@@ -293,7 +297,8 @@
 
 
                     </a><a class="notifications__item" href="notifications.html">
-                      <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png" alt="" />
+                      <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
+                          alt="" />
                         <div class="notifications__status bg-purple"><img class="notifications__pic"
                             src="../static/img/message.svg" alt="" /></div>
                       </div>
@@ -356,7 +361,8 @@
 
                   <div class="details__item">
                     <div class="details__head">
-                      <div class="details__preview bg-purple"><img class="details__pic" src="../static/img/folder.svg" alt="">
+                      <div class="details__preview bg-purple"><img class="details__pic" src="../static/img/folder.svg"
+                          alt="">
                       </div>
                       <div class="details__text caption-sm">数据总量</div>
                     </div>
@@ -368,7 +374,8 @@
 
                   <div class="details__item">
                     <div class="details__head">
-                      <div class="details__preview bg-pink"><img class="details__pic" src="../static/img/activity.svg" alt="">
+                      <div class="details__preview bg-pink"><img class="details__pic" src="../static/img/activity.svg"
+                          alt="">
                       </div>
                       <div class="details__text caption-sm">CPU负载</div>
                     </div>
@@ -380,7 +387,8 @@
 
                   <div class="details__item">
                     <div class="details__head">
-                      <div class="details__preview bg-blue"><img class="details__pic" src="../static/img/bag.svg" alt=""></div>
+                      <div class="details__preview bg-blue"><img class="details__pic" src="../static/img/bag.svg"
+                          alt=""></div>
                       <div class="details__text caption-sm">内存占用</div>
                     </div>
                     <div class="details__counter h3">74%</div>
@@ -391,7 +399,8 @@
 
                   <div class="details__item">
                     <div class="details__head">
-                      <div class="details__preview bg-red"><img class="details__pic" src="../static/img/chat.svg" alt=""></div>
+                      <div class="details__preview bg-red"><img class="details__pic" src="../static/img/chat.svg"
+                          alt=""></div>
                       <div class="details__text caption-sm">用户趋势</div>
                     </div>
                     <div class="details__counter h3">平稳</div>
@@ -406,19 +415,7 @@
 
 
 
-            <div class="details" >
-              <div class="details__container"  style="height: 500px ">
-                <div class="details__title h6">站点热力图</div>
 
-                <div class="details__box" style="background-color: #fff;">
-                  <div class="details__chart details__chart_counter ">
-                    <div id="heatmap">
-                      <img src="../static/img/拓扑.png" style="margin: auto; width: 695px; height: 330px ">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
 
           </div>
@@ -442,53 +439,7 @@
               </div>
 
               <!--主体侧栏-下半-->
-              <div class="widget widget_shadow">
-                <div class="widget__title">健康度指标</div>
 
-                <div class="goal__list">
-                  <div class="goal__item">
-
-                    <div class="goal__head">
-                      <div class="goal__title title">rssi</div>
-                      <div class="goal__percent title">98%</div>
-                    </div>
-
-                    <div class="goal__indicator">
-                      <div class="goal__progress bg-purple" style="width: 98%;"></div>
-                    </div>
-
-                  </div>
-
-                  <div class="goal__item">
-                    <div class="goal__head">
-                      <div class="goal__title title">downLinkSpeed</div>
-                      <div class="goal__percent title">86%</div>
-                    </div>
-                    <div class="goal__indicator">
-                      <div class="goal__progress bg-green" style="width: 86%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="goal__item">
-                    <div class="goal__head">
-                      <div class="goal__title title">latency</div>
-                      <div class="goal__percent title">94%</div>
-                    </div>
-                    <div class="goal__indicator">
-                      <div class="goal__progress bg-yellow" style="width: 94%;"></div>
-                    </div>
-                  </div>
-                  <div class="goal__item">
-                    <div class="goal__head">
-                      <div class="goal__title title">txDiscardRatio</div>
-                      <div class="goal__percent title">81%</div>
-                    </div>
-                    <div class="goal__indicator">
-                      <div class="goal__progress bg-pink" style="width: 81%;"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -584,40 +535,6 @@
   <script src="../static/js/lib/flot/jquery.flot.js"></script>
   <script src="../static/js/mycharts/flow-chart.js"></script>
 
-  <!--heatmap-->
-  <script>
-    $(function () {
-      $.ajax({
-        type: "post",
-        // python url
-        url: "/heart_map",
-        //java url
-        // url: "http://localhost:8080/heartmap/get_heartmap",
-
-        dataType: "json",
-        success: function (data) {
-          console.log(data);
-          var heatmapInstance = h337.create({
-            container: document.querySelector('#heatmap'),
-          });
-
-          var points = [];
-          var max = 0;
-
-          points =data.sss
-          var draw_data = {
-            max: 50,
-            data: data.sss
-
-          };
-          console.log(draw_data)
-          heatmapInstance.setData(draw_data);
-
-        },
-      })
-    });
-
-  </script>
   <script src="../static/js/lib/heatmap.js/build/heatmap.js"></script>
 
 </body>

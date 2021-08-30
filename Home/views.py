@@ -85,7 +85,7 @@ def Sign(request):
         # 登录
 
         if nameAndPasswd.get(nameSignIN) == passwordSignIN:
-            return render(request, 'Home/overview1.html')
+            return render(request, 'Home/overview.html')
             # print("密码正确")
         else:
             return render(request, 'Home/Sign_IN&UP.html')

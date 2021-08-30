@@ -1,320 +1,82 @@
-from django.shortcuts import render, redirect, HttpResponseRedirect
-from datetime import date
-from aip import AipSpeech
-import numpy as np
-import pyaudio
-import wave
+import http.client
+import ssl
 import json
-from . import models
-import requests
-import re
-# 语音播报模块
-import pyttsx3
-from django.http import JsonResponse
-# aiff文件转换成mp3编码文件模块
-# from pydub import AudioSegment
-from smtplib import SMTP
-from email.mime.text import MIMEText
-from email.header import Header
-import sqlite3
+import time
 
-"""
-用户信息登录判断
-获得所有用户信息密码键值对
-"""
+ssl._create_default_https_context = ssl._create_unverified_context
 
-nameAndPasswd = {}
-nameAndEmail = {}
+conn = http.client.HTTPSConnection("117.78.31.209:26335")
 
+payload = "{\"endTime\":1628507381000,\"startTime\":1628438400000,\"userMac\":\"c4-9e-d3-d2-d9-da\"}"
 
-def update_sql():
-    con = sqlite3.connect('db.sqlite3')
-    cur = con.cursor()
-    sql = 'select * from Home_userinfo'
+headers = {
+    'x-auth-token': "budDCq6r1SC/t5BlOdsANs86r84bRztFIGJ2QI9eEDk=",
+    'content-type': "application/json"
+}
+
+conn.request("POST", "/rest/campusclientwebsite/v1/journey/nodelist?=&=", payload, headers)
+
+res = conn.getresponse()
+data = res.read().decode("utf-8")
+data = json.loads(data)
+
+a = 0
+for i in data['data']:
     try:
-        cur.execute(sql)
-        # 获取所有数据
-        person_all = cur.fetchall()
-        # print(person_all)
-        # 遍历
-        for p in person_all:
-            # 创建一组组新的用户信息字典 放入peopleInfo 用户名:密码
-            peopleInfo = {p[1]: p[3]}
-            # 创建用户名:邮箱
-            peopleEmail = {p[1]: p[2]}
-            # 将每个字典更新到nameAndPasswd 做成所有用户信息合集
-            nameAndPasswd.update(peopleInfo)
-            nameAndEmail.update(peopleEmail)
+        # 时间戳处理
+        if float(i['accTime']) > 162847546100:
+            i['accTime'] = float(i['accTime']) / 1000
+        timestamp = float(i['accTime'])
 
-            # print(p)
+        timeArray = time.localtime(timestamp)
+
+        otherStyleTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
+
+        i['accTime'] = otherStyleTime
+
     except Exception as e:
-        print(e)
-        print('查询失败')
-    finally:
-        # 关闭游标
-        cur.close()
-        # 关闭连接
-        con.close()
-        print('用户数据加载完成')
+        print("shibai")
+# L1 = []
+# for i in range(len(data['data'])):
+#     try:
+#         L1.append(data['data'][i]['nodeKpi']['duration'])
+#         print(data['data'][i]['accTime'])
+#         print(L1)
+#     except:
+#         L1.append('异常')
+# for i in range(30):
+#     try:
+#         if int(data["data"][i]['nodeKpi']['duration']) < 1:
+#             data["data"][i]['nodeKpi']['duration'] = 0
+#         print(data["data"][i]['nodeKpi']['duration'])
+#     except:
+#         print("用户信息错误")
+import random
 
-update_sql()
+accTime = []
+liveTime = []
+jourDir = {}
+jourList = []
+situation = []
+color = []
+for i in range(len(data['data'])):
+    pingFen = random.randrange(80, 100)
+    accTime.append(data['data'][i]['accTime'])
 
-"""
-注册，登录，注销
-"""
-
-
-def admin(request):
-    return render(request, 'Home/intro.html')
-
-
-# 登录
-def Sign(request):
-    if request.method == 'POST':
-
-        # 获取页面填写的信息
-        global nameSignIN
-        nameSignIN = request.POST.get('accountSignIn')
-        passwordSignIN = request.POST.get('passwordSignIn')
-
-        # 登录
-
-        if nameAndPasswd.get(nameSignIN) == passwordSignIN:
-            return render(request, 'Home/overview.html')
-            # print("密码正确")
-        else:
-            return render(request, 'Home/Sign_IN&UP.html')
-            # print("密码错误")
-        # if nameSignIN == 'huawei' and passwordSignIN == 'huawei':
-        #     return render(request, 'Home/overview.html')
-    return render(request, 'Home/Sign_IN&UP.html')
-
-
-# 注册
-def register(request):
-    # 获取页面填写的信息
-    userIdSignUp = request.POST.get('userIdSignUp')
-    passwordSignUp = request.POST.get('passwordSignUp')
-    confirmPasswordSignUp = request.POST.get('confirmPasswordSignUp')
-    emailSignUp = request.POST.get('emailSignUp')
-    # 注册
-    if passwordSignUp == confirmPasswordSignUp:
-        models.UserINFO.objects.create(username=userIdSignUp, password=passwordSignUp,
-                                       email=emailSignUp)
-        update_sql()
-        return redirect('/Sign_IN&UP.html')
-
-    print("注册失败")
-    return redirect('/Sign_IN&UP.html')
-
-
-# 获得个人信息
-def getUserInfo(request):
-    if request.method == 'POST':
-        UserGetEmail = nameAndEmail.get(nameSignIN)
-
-
-# 修改个人信息
-def infoChange(request):
-    con = sqlite3.connect('db.sqlite3')
-    cur = con.cursor()
-    if request.method == 'POST':
-        a = 0
-        b = 0
-        cur.execute('UPDATE Home_userinfo set email=? where username=? ', (b, a))
-        con.commit()
-
-        # 关闭游标
-        cur.close()
-        # 关闭连接
-        con.close()
-
-
-# 返回
-def overview(request):
-    return render(request, 'Home/overview.html')
-
-
-# def twoone(request):
-#     return render(request, 'Home/2.1.html')
-
-# Create your views here.
-
-
-'''
-语音输入模块
-'''
-APP_ID = "23721149"
-API_KEY = "PVCVwFs9TO7CMHvWVw8oac9M"
-SECRET_KEY = "GhKxkUGLhUTEieXeRZYgphgao0QQcKTL"
-
-client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
-CHUNK = 1024
-FORMAT = pyaudio.paInt16
-CHANNELS = 1
-RATE = 16000
-RECORD_SECONDS = 5
-warn = [0]  # 0不用发告警邮件 1发告警邮件
-user = [0]  # 1的时候跳转界面
-
-
-def wav2pcm(wavfile, pcmfile, data_type=np.int16):
-    f = open(wavfile, "rb")
-    f.seek(0)
-    f.read(44)
-    data = np.fromfile(f, dtype=data_type)
-    data.tofile(pcmfile)
-
-
-def rec(file_name):
-    p = pyaudio.PyAudio()
-
-    stream = p.open(format=FORMAT,
-                    channels=CHANNELS,
-                    rate=RATE,
-                    input=True,
-                    frames_per_buffer=CHUNK)
-
-    print("开始录音,请说话......")
-
-    frames = []
-
-    for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
-        data = stream.read(CHUNK)
-        frames.append(data)
-
-    print("录音结束！")
-
-    stream.stop_stream()
-    stream.close()
-    p.terminate()
-
-    wf = wave.open(file_name, 'wb')
-    wf.setnchannels(CHANNELS)
-    wf.setsampwidth(p.get_sample_size(FORMAT))
-    wf.setframerate(RATE)
-    wf.writeframes(b''.join(frames))
-    wf.close()
-
-
-def json_send():  # 发送函数
-    url = 'http://47.106.23.116:7788'  # 改为服务器Ip
-    header = {
-        'Content-Type': 'application/json; charset=utf-8'
-    }
-    requests.post(url, headers=header)
-
-
-def voice_play(voice_str):
-    content = voice_str
     try:
-        # 输出文件格式
-        outFile = 'out.aiff'
+        liveTime.append(data['data'][i]['nodeKpi']['duration'])
+        # print(data['data'][i]['accTime'])
+        # print(liveTime)
+    except:
+        liveTime.append(0)
+    if liveTime[i] == 0 :
+        situation.append("接入错误")
+        color.append('#FF000')
+    else:
+        situation.append("接入成功")
+        color.append('#5dd375')
+    jourDir = {'accTime': data['data'][i]['accTime'], 'huoyuetime': liveTime[i],
+               'pingfen': pingFen,'color':color[i],}
 
-        print('准备开始语音播报...')
-
-        # 设置要播报的Unicode字符串
-        engine.say(content)
-
-        # 等待语音播报完毕
-        engine.runAndWait()
-
-        # 将文字输出为 aiff 格式的文件
-        # engine.save_to_file(content, outFile)
-
-        # 将文件转换为mp3格式
-        # AudioSegment.from_file(outFile).export("Python.mp3", format="mp3")
-    except Exception:
-        print("出现错误")
-
-
-def voice_recognition(voice_file):  # 语音识别
-    keyword_warm = '检测'
-    keyword_user = '用户'
-
-    # text_txt = json.loads(voice_file)
-
-    # ----检测字符串中是否 有 检测  等关键词--------------------------
-    if keyword_warm in voice_file:
-        print('开始检测')
-        # s = re.findall("\d+", voice_file)
-        warn[0] = 1
-    if keyword_user in voice_file:
-        user[0] = 1
-        print(user)
-        print('跳转页面')
-
-
-# json_send //发送至服务器
-# json_send()
-engine = pyttsx3.init()
-
-
-# def touserlist(request):
-#     # 跳转用户界面
-#     return render(request, 'Home/userlist.html')
-
-
-def voice_detect(request):
-    rec("1.wav")
-
-    wav2pcm("1.wav", "1.pcm")
-
-    with open("1.pcm", 'rb') as fp:
-        file_context = fp.read()
-
-    res = client.asr(file_context, 'pcm', 16000, {
-        'dev_pid': 1537,
-    })
-
-    print(res['result'][0])  # 提取字典中 result 后信息
-    res_str = res["result"][0]
-    # print(user)
-    voice_recognition(res_str)  # 数据处理
-    # 跳转到用户界面
-    # if user[0] == 1:
-    #     user[0] = 0
-    #     print("开始跳转页面")
-    #     return redirect('/touserlist')
-    color = 'greenyellow'
-    if warn[0] == 1:
-        warning()
-        warn[0] = 0
-    # print(user)
-    return JsonResponse({'voice_detect': res_str, 'color': color})
-
-
-# voice_detect(requests)  # 测试语音服务
-
-'''
-语音输入模块结束
-'''
-
-'''
-邮箱告警模块
-'''
-
-
-def send_email(SMTP_host, from_addr, password, to_addrs, subject, content):
-    """
-    port = 587
-    在登陆邮箱前加上email_client.starttls()这句话
-    """
-    email_client = SMTP(SMTP_host, 587)
-    email_client.starttls()
-    email_client.login(from_addr, password)
-
-    msg = MIMEText(content, 'plain', 'utf-8')
-    msg['Subject'] = Header(subject, 'utf-8')  # subject
-    msg['From'] = from_addr
-    msg['to'] = ''.join(to_addrs)
-    email_client.sendmail(from_addr, to_addrs, msg.as_string())
-
-    email_client.quit()
-
-
-def warning():
-    # qq发送qq
-
-    receiver = ["943996316@qq.com"]
-    send_email("smtp.qq.com", "943996316@qq.com", "wbzsqseidgoibcgb", receiver, "异常告警", "发现深圳站点出现流量异常")
+    jourList.append(jourDir)
+print(situation)

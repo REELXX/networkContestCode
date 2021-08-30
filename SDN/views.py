@@ -110,6 +110,14 @@ def other(request):
     return render(request, 'Home/other.html')
 
 
+def monitorDetail(request):
+    return render(request, 'Home/detail1.html')
+
+
+def otherDetail(request):
+    return render(request, 'Home/detail2.html')
+
+
 def satisfaction(request):
     return render(request, 'Home/satisfaction.html')
 
@@ -214,12 +222,12 @@ def main():
             n2 = n2 + 1
         elif Dis[i][2] < Dis[i][0] and Dis[i][2] < Dis[i][1]:
             n3 = n3 + 1
-    list = [n1,n2,n3]
+    list = [n1, n2, n3]
     n = len(list)
     for i in range(n):
 
         # Last i elements are already in place
-        for j in range(0,n-i-1):
+        for j in range(0, n - i - 1):
 
             if list[j] > list[j + 1]:
                 list[j], list[j + 1] = list[j + 1], list[j]
@@ -238,32 +246,76 @@ def manyidu(request):
     # 拿到热力图
 
 
-url = "https://117.78.31.209:26335/rest/campusrtlswebsite/v1/clientlocation/heatmap"
-headers = {
-    "Content-Type": "application/json",
-    "X-Auth-Token": token,
-    "Accept": "application/json"
-}
-url = url + "?startTime=1624323600000&endTime=1624327200000"
-res = requests.post(url, headers=headers, verify=False)
-data = res.json()['data']
+def getheatmap():
+    url = "https://117.78.31.209:26335/rest/campusrtlswebsite/v1/clientlocation/heatmap"
+    headers = {
+        "Content-Type": "application/json",
+        "X-Auth-Token": token,
+        "Accept": "application/json"
+    }
+    url = url + "?startTime=1624323600000&endTime=1624327200000"
+    res = requests.post(url, headers=headers, verify=False)
+    data = res.json()['data']
 
-# 处理data
-min_data = 10000
-max_data = 0
-for d in data:
-    if min_data > d['count']:
-        min_data = d['count']
+    # 处理data
+    min_data = 10000
+    max_data = 0
+    for d in data:
+        if min_data > d['count']:
+            min_data = d['count']
 
-    if max_data < d['count']:
-        max_data = d['count']
+        if max_data < d['count']:
+            max_data = d['count']
 
-error = max_data - min_data
-res_data = []
-for d in data:
-    d['value'] = math.floor(d['count'] / error * 50)
-    d.pop('count')
+    error = max_data - min_data
+    res_data = []
+    for d in data:
+        d['value'] = math.floor(d['count'] / error * 50)
+        d.pop('count')
+    print("热力图数据加载完成")
+    return data
 
 
 def heart_map(request):
-    return JsonResponse({'sss': data})
+    heatmap_data = getheatmap()
+    return JsonResponse({'sss': heatmap_data})
+
+
+# 用户终端信息
+
+def getUserDeviveMap():
+    import ssl
+    ssl._create_default_https_context = ssl._create_unverified_context
+    # 用户终端信息
+    import http.client
+    import json
+    conn = http.client.HTTPSConnection("117.78.31.209:26335")
+    headers = {'x-auth-token': "budDCq6r1SC/t5BlOdsANs86r84bRztFIGJ2QI9eEDk="}
+    conn.request("POST",
+                 "/rest/campusrtlswebsite/v1/clientlocation/lastlocation?param=%7B%22id%22%3A%22540d8574-a743-4cda-a47e-3718b6a4f722%22%2C%22level%22%3A3%2C%22type%22%3A%22floor%22%7D&=&=",
+                 headers=headers)
+
+    res = conn.getresponse()
+    data = res.read()
+
+    data = json.loads(data.decode("utf-8"))
+    # print(data["data"])
+    keys = ['x', 'y']
+    datalist = []
+
+    for item in data["data"]:
+        temp = {}
+        for key in keys:
+            # print(key,data["data"][item][key])
+            temp[key] = data["data"][item][key]
+        # print(temp)
+        temp["value"] = 100
+        datalist.append(temp)
+
+    # print(datalist)
+    return datalist
+
+
+def heart_map2(request):
+    userheatmap_data = getUserDeviveMap()
+    return JsonResponse({'userXY': userheatmap_data})
