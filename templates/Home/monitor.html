@@ -49,7 +49,7 @@
 
         <button class="sidebar__close">
           <svg class="icon icon-close">
-            <use xlink:href="../static../static/img/sprite.svg#icon-close"></use>
+            <use xlink:href="../static/img/sprite.svg#icon-close"></use>
           </svg>
         </button>
 
@@ -64,12 +64,13 @@
 
       <div class="sidebar__wrapper">
         <div class="sidebar__inner">
-          <a class="sidebar__logo" href="#"><img class="sidebar__pic" src="../static/img/logo-sm.png" alt="" /></a>
+          <a class="sidebar__logo" href="#"><img class="sidebar__pic" src="../static/img/logo-sm.png"
+                                                 alt="" /></a>
           <div class="sidebar__list">
             <div class="sidebar__group">
               <div class="sidebar__caption caption-sm"><span>Overview</span></div>
               <div class="sidebar__menu">
-                <a class="sidebar__item " href="overview.html">
+                <a class="sidebar__item" href="overview.html">
 
                   <div class="sidebar__icon">
                     <svg class="icon icon-overview">
@@ -91,31 +92,31 @@
 
               <div class="sidebar__menu">
 
-                <a class="sidebar__item active " href="monitor.html">
+                <a class="sidebar__item active" href="monitor.html">
                   <div class="sidebar__icon"><svg class="icon icon-overview">
-                      <use xlink:href="../static/img/sprite.svg#icon-overview"></use>
-                    </svg></div>
+                    <use xlink:href="../static/img/sprite.svg#icon-overview"></use>
+                  </svg></div>
                   <div class="sidebar__text">站点趋势总览</div>
                 </a>
 
-                <a class="sidebar__item" href="detail1.html">
+                <a class="sidebar__item " href="detail1.html">
                   <div class="sidebar__icon"><svg class="icon icon-bag">
-                      <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
-                    </svg></div>
+                    <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
+                  </svg></div>
                   <div class="sidebar__text">位置流量趋势</div>
                 </a>
 
                 <a class="sidebar__item" href="other.html">
                   <div class="sidebar__icon"><svg class="icon icon-bag">
-                      <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
-                    </svg></div>
+                    <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
+                  </svg></div>
                   <div class="sidebar__text">健康评测总览</div>
                 </a>
 
                 <a class="sidebar__item" href="detail2.html">
                   <div class="sidebar__icon"><svg class="icon icon-bag">
-                      <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
-                    </svg></div>
+                    <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
+                  </svg></div>
                   <div class="sidebar__text">网络健康细分指标</div>
                 </a>
               </div>
@@ -127,24 +128,39 @@
               <div class="sidebar__menu">
 
                 <a class="sidebar__item" href="userlist.html">
-                  <div class="sidebar__icon"><svg class="icon icon-message">
+                  <div class="sidebar__icon">
+                    <svg class="icon icon-message">
                       <use xlink:href="../static/img/sprite.svg#icon-message"></use>
-                    </svg></div>
+                    </svg>
+                  </div>
                   <div class="sidebar__text">查询用户列表</div>
                 </a>
 
+                <a class="sidebar__item" href="userJourney.html">
+                  <div class="sidebar__icon">
+                    <svg class="icon icon-message">
+                      <use xlink:href="../static/img/sprite.svg#icon-message"></use>
+                    </svg>
+                  </div>
+                  <div class="sidebar__text">查询用户旅程</div>
+                </a>
+
                 <a class="sidebar__item" href="errorDetect.html">
-                  <div class="sidebar__icon"><svg class="icon icon-notification">
+                  <div class="sidebar__icon">
+                    <svg class="icon icon-notification">
                       <use xlink:href="../static/img/sprite.svg#icon-notification"></use>
-                    </svg></div>
+                    </svg>
+                  </div>
                   <div class="sidebar__text">消息中心</div>
                   <div class="sidebar__counter">3</div>
                 </a>
 
                 <a class="sidebar__item" href="satisfaction.html">
-                  <div class="sidebar__icon"><svg class="icon icon-chat">
+                  <div class="sidebar__icon">
+                    <svg class="icon icon-chat">
                       <use xlink:href="../static/img/sprite.svg#icon-chat"></use>
-                    </svg></div>
+                    </svg>
+                  </div>
                   <div class="sidebar__text">扩展功能</div>
                 </a>
 
@@ -157,8 +173,9 @@
           <div class="sidebar__profile">
             <div class="sidebar__details">
 
-              <a class="sidebar__link" href="#">
-                <div class="sidebar__icon"><svg class="icon icon-profile">
+              <a class="sidebar__link js-popup-open" href="#popup-settings">
+                <div class="sidebar__icon">
+                  <svg class="icon icon-profile">
                     <use xlink:href="../static/img/sprite.svg#icon-profile"></use>
                   </svg>
                 </div>
@@ -167,9 +184,11 @@
 
 
               <a class="sidebar__link" href="Sign_IN&UP.html">
-                <div class="sidebar__icon"><svg class="icon icon-logout">
+                <div class="sidebar__icon">
+                  <svg class="icon icon-logout">
                     <use xlink:href="../static/img/sprite.svg#icon-logout"></use>
-                  </svg></div>
+                  </svg>
+                </div>
                 <div class="sidebar__text">Log out</div>
               </a>
 
@@ -177,26 +196,29 @@
 
             <a class="sidebar__user" href="#">
 
-              <div class="sidebar__ava"><img class="sidebar__pic" src="../static/img/ava.png" alt="" /></div>
+              <div class="sidebar__ava"><img class="sidebar__pic" src="../static/img/ava.png" alt="" />
+              </div>
               <div class="sidebar__desc">
                 <div class="sidebar__man">管理员</div>
                 <div class="sidebar__status caption">administer</div>
               </div>
-              <div class="sidebar__arrow"><svg class="icon icon-arrows">
+              <div class="sidebar__arrow">
+                <svg class="icon icon-arrows">
                   <use xlink:href="../static/img/sprite.svg#icon-arrows"></use>
-                </svg></div>
+                </svg>
+              </div>
             </a>
 
           </div>
         </div>
       </div>
       <div class="sidebar__bottom"><label class="switch switch_theme js-switch-theme"><input class="switch__input"
-            type="checkbox" /><span class="switch__in"><span class="switch__box"></span><span class="switch__icon"><svg
-                class="icon icon-moon">
-                <use xlink:href="../static/img/sprite.svg#icon-moon"></use>
-              </svg><svg class="icon icon-sun">
-                <use xlink:href="../static/img/sprite.svg#icon-sun"></use>
-              </svg></span></span></label></div>
+                                                                                             type="checkbox" /><span class="switch__in"><span class="switch__box"></span><span
+              class="switch__icon"><svg class="icon icon-moon">
+                                <use xlink:href="../static/img/sprite.svg#icon-moon"></use>
+                            </svg><svg class="icon icon-sun">
+                                <use xlink:href="../static/img/sprite.svg#icon-sun"></use>
+                            </svg></span></span></label></div>
     </div>
 
 
@@ -425,95 +447,65 @@
           <div class="page__col">
             <div class="page__group">
               <!--主体侧栏-上半-->
-              <div class="widget widget_stat widget_pb60">
 
-                <div class="widget__title">站点设备分布</div>
-                <div class="widget__counter title title_md color-purple">
-                  <div id="6a7c753f18d04e8585e1827c1af1bb60" class="chart-container"
-                    style="width:100%; height:300px;overflow:hidden;"></div>
-                </div>
-
-                <div class="widget__text"></div>
-                <a class="widget__btn btn btn_white btn_wide" href="../static/payouts.html">查看详情</a>
-
-              </div>
 
               <!--主体侧栏-下半-->
+              <div class="widget widget_shadow">
+                <div class="widget__title">健康度指标</div>
 
+                <div class="goal__list">
+                  <div class="goal__item">
+
+                    <div class="goal__head">
+                      <div class="goal__title title">信号强度</div>
+                      <div class="goal__percent title">良好</div>
+                    </div>
+
+                    <div class="goal__indicator">
+                      <div class="goal__progress bg-purple" style="width: 98%;"></div>
+                    </div>
+
+                  </div>
+
+                  <div class="goal__item">
+                    <div class="goal__head">
+                      <div class="goal__title title">平均下行链路速度</div>
+                      <div class="goal__percent title">89kbps</div>
+                    </div>
+                    <div class="goal__indicator">
+                      <div class="goal__progress bg-green" style="width: 97%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="goal__item">
+                    <div class="goal__head">
+                      <div class="goal__title title">平均延迟</div>
+                      <div class="goal__percent title">506ms</div>
+                    </div>
+                    <div class="goal__indicator">
+                      <div class="goal__progress bg-yellow" style="width: 95%;"></div>
+                    </div>
+                  </div>
+                  <div class="goal__item">
+                    <div class="goal__head">
+                      <div class="goal__title title">平均丢包比率</div>
+                      <div class="goal__percent title">0.1%</div>
+                    </div>
+                    <div class="goal__indicator">
+                      <div class="goal__progress bg-pink" style="width: 98%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  <!--弹出窗口-->
   <div class="popup mfp-hide" id="popup-settings">
-    <form class="popup__form">
-      <div class="popup__title h6">Account Settings</div>
-      <div class="popup__tags"><a class="popup__tag active" href="#">Profile</a><a class="popup__tag"
-          href="#">Password</a><a class="popup__tag" href="#">Email</a><a class="popup__tag" href="#">Notification</a><a
-          class="popup__tag" href="#">Settings</a></div><select class="popup__select mobile-show">
-        <option>Profile</option>
-        <option>Password</option>
-        <option>Email</option>
-        <option>Notification</option>
-        <option>Settings</option>
-      </select>
-      <div class="popup__user">
-        <div class="popup__title h6 mobile-show">Your Profile</div>
-        <div class="popup__category caption-sm">Your Avatar</div>
-        <div class="popup__line">
-          <div class="popup__ava"><img class="popup__pic" src="../static/img/ava.png" alt=""></div>
-          <div class="popup__details">
-            <div class="popup__btns">
-              <div class="popup__loading"><input class="popup__file" type="file"><button
-                  class="popup__btn btn btn_purple">Upload New</button></div><button
-                class="popup__btn btn btn_gray">Delete Avatar</button>
-            </div>
-            <div class="popup__text">Avatar help your teammates recognize you in Unity.</div>
-          </div>
-        </div>
-      </div>
-      <div class="popup__fieldset">
-        <div class="popup__row">
-          <div class="popup__field field">
-            <div class="field__label">Your Full Name</div>
-            <div class="field__wrap"><input class="field__input" type="text"></div>
-          </div>
-          <div class="popup__field field">
-            <div class="field__label">Display Name</div>
-            <div class="field__wrap"><input class="field__input" type="text"></div>
-          </div>
-        </div>
-        <div class="popup__row">
-          <div class="popup__field field">
-            <div class="field__label">Role</div>
-            <div class="field__wrap"><input class="field__input" type="text"></div>
-          </div>
-          <div class="popup__field field">
-            <div class="field__label">Location</div>
-            <div class="field__wrap"><input class="field__input" type="text"></div>
-          </div>
-        </div>
-        <div class="popup__row">
-          <div class="popup__field field">
-            <div class="field__label">Role</div>
-            <div class="field__wrap"><input class="field__input" type="text"></div>
-          </div>
-          <div class="popup__field field">
-            <div class="field__label">Team</div>
-            <div class="field__wrap"><input class="field__input" type="text"></div>
-          </div>
-        </div>
-        <div class="popup__field field">
-          <div class="field__label">Bio</div>
-          <div class="field__wrap"><textarea class="field__textarea"></textarea></div>
-        </div>
-      </div><button class="popup__btn btn btn_black" type="submit">Update Profile</button>
-    </form>
   </div>
-
-
   <!-- scripts-->
   <script src="../static/js/lib/jquery.min.js"></script>
   <script src="../static/js/lib/owl.carousel.min.js"></script>
@@ -538,5 +530,256 @@
   <script src="../static/js/lib/heatmap.js/build/heatmap.js"></script>
 
 </body>
+<!--初始用户信息-->
+<script>
+  $(document).ready(function () {
+    $.ajax({
+      url: "/getUserInfo",
+      data: {},
+      type: "POST",
+      dataType: "json",
+      success: function (data) {
+        $("#popup-settings").empty();
+        var yonghu = "<form class=\"popup__form\">\n" +
+                "\n" +
+                "\n" +
+                "        <div class=\"popup__user\">\n" +
+                "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
+                "            <div class=\"popup__title h2 \"></div>\n" +
+                "\n" +
+                "\n" +
+                "            <div class=\"popup__line\">\n" +
+                "\n" +
+                "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
+                "\n" +
+                "                <div class=\"popup__details\">\n" +
+                "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
+                "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
+                "                </div>\n" +
+                "            </div>\n" +
+                "        </div>\n" +
+                "\n" +
+                "        <div class=\"popup__fieldset\">\n" +
+                "\n" +
+                "            <div class=\"popup__row\">\n" +
+                "\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">用户名</div>\n" +
+                "                    <div class=\"popup__title h4 \">"+data.username+"</div>\n" +
+                "                </div>\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">绑定邮箱</div>\n" +
+                "                    <div class=\"popup__title h4 \">"+data.email+"</div>\n" +
+                "                </div>\n" +
+                "            </div>\n" +
+                "\n" +
+                "            <div class=\"popup__row\">\n" +
+                "\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">用户等级</div>\n" +
+                "                    <div class=\"popup__title h4 \">管理员</div>\n" +
+                "                </div>\n" +
+                "\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">最近登陆IP</div>\n" +
+                "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
+                "                </div>\n" +
+                "            </div>\n" +
+                "\n" +
+                "            <div class=\"popup__row\">\n" +
+                "\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">所属团体</div>\n" +
+                "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
+                "                </div>\n" +
+                "\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">账户安全等级</div>\n" +
+                "                    <div class=\"popup__title h4 \">优</div>\n" +
+                "\n" +
+                "                </div>\n" +
+                "\n" +
+                "            </div>\n" +
+                "            <div class=\"popup__btns\">\n" +
+                "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
+                "                <button class=\"popup__btn btn btn_gray\"  id=\"bianji\">编辑</button>\n" +
+                "            </div>\n" +
+                "    </form>";
+        $("#popup-settings").append(yonghu);
+      }
 
+    });
+  });
+</script>
+<!--开始修改-->
+<script>
+  $(document).ready(function () {
+
+    $("#popup-settings").on("click","#bianji",function () {
+      $.ajax({
+        url: "/getUserInfo",
+        data: {},
+        type: "POST",
+        dataType: "json",
+        success: function (data) {
+          $("#popup-settings").empty();
+          var yonghu = "<form class=\"popup__form\">\n" +
+                  "\n" +
+                  "\n" +
+                  "     <div class=\"popup__user\">\n" +
+                  "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
+                  "            <div class=\"popup__title h2 \"></div>\n" +
+                  "\n" +
+                  "\n" +
+                  "            <div class=\"popup__line\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__details\">\n" +
+                  "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
+                  "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "        </div>\n" +
+                  "\n" +
+                  "        <div class=\"popup__fieldset\">\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">用户名:</div>\n" +
+                  "                    <div class=\"popup__title h4 \"><input class='username' type='text'></div>\n" +
+                  "                </div>\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">绑定邮箱</div>\n" +
+                  "                    <div class=\"popup__title h4 \"><input class='email' type='text'></div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">用户等级</div>\n" +
+                  "                    <div class=\"popup__title h4 \">管理员</div>\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">最近登陆IP</div>\n" +
+                  "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">所属团体</div>\n" +
+                  "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">账户安全等级</div>\n" +
+                  "                    <div class=\"popup__title h4 \">优</div>\n" +
+                  "\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "            </div>\n" +
+                  "            <div class=\"popup__btns\">\n" +
+                  "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
+                  "                <button class=\"popup__btn btn btn_gray\" id=\"queding\">确定</button>\n" +
+                  "            </div>\n" +
+                  "    </form>";
+          $("#popup-settings").append(yonghu);
+        }
+      });
+
+
+    });
+  });
+</script>
+<!--确定修改-->
+<script>
+  $(document).ready(function () {
+
+    $("#popup-settings").on("click","#queding",function () {
+      var username=$(".username").val();
+      var email=$(".email").val();
+      $.ajax({
+        url: "/infoChange",
+        data: {username:username,
+          email:email},
+        type: "POST",
+        dataType: "json",
+        success: function (data) {
+          $("#popup-settings").empty();
+          var yonghu = "<form class=\"popup__form\">\n" +
+                  "\n" +
+                  "\n" +
+                  "     <div class=\"popup__user\">\n" +
+                  "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
+                  "            <div class=\"popup__title h2 \"></div>\n" +
+                  "\n" +
+                  "\n" +
+                  "            <div class=\"popup__line\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__details\">\n" +
+                  "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
+                  "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "        </div>\n" +
+                  "\n" +
+                  "        <div class=\"popup__fieldset\">\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">用户名:</div>\n" +
+                  "                    <div class=\"popup__title h4 \">"+data.username+"</div>\n" +
+                  "                </div>\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">绑定邮箱</div>\n" +
+                  "                    <div class=\"popup__title h4 \">"+data.email+"</div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">用户等级</div>\n" +
+                  "                    <div class=\"popup__title h4 \">管理员</div>\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">最近登陆IP</div>\n" +
+                  "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">所属团体</div>\n" +
+                  "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">账户安全等级</div>\n" +
+                  "                    <div class=\"popup__title h4 \">优</div>\n" +
+                  "\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "            </div>\n" +
+                  "            <div class=\"popup__btns\">\n" +
+                  "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
+                  "                <button class=\"popup__btn btn btn_gray\" id=\"bianji\">编辑</button>\n" +
+                  "            </div>\n" +
+                  "    </form>";
+          $("#popup-settings").append(yonghu);
+        }
+      });
+    });
+  });
+</script>
 </html>
