@@ -132,7 +132,7 @@ def infoChange(request):
         useNameChange = request.POST.get('username')
         emailChange = request.POST.get('email')
         cur.execute('UPDATE Home_userinfo set email=?,username=? where username=? ',
-                    (emailChange, useNameChange,useName))
+                    (emailChange, useNameChange, useName))
         con.commit()
 
         # 关闭游标
@@ -291,12 +291,17 @@ def voice_detect(request):
 
         # 返回语音对应页面url
     url = False
+    AI = False
     url_dict = {'用户': '/userlist.html', '设备': '/other.html', '检测': '/errorDetect.html'}
     for i in url_dict.keys():
         if i in res_str:
             url = url_dict[i]
+    ai = ['原因', '郑林昕', '设备情况', '优化']
+    for i in range(len(ai)):
+        if ai[i] in res_str:
+            AI = ai[i]
 
-    return JsonResponse({'url': url, 'voice_detect': res_str, 'color': color})
+    return JsonResponse({'url': url, 'voice_detect': res_str, 'color': color, 'AI': AI})
 
 
 # voice_detect(requests)  # 测试语音服务

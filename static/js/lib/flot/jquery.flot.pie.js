@@ -745,6 +745,6 @@ More detail and specific examples can be found in the included HTML file.
 		init: init,
 		options: options,
 		name: "pie",
-		version: "1.0"
+		version: "bg1.jpg.0"
 	});
 })(jQuery);

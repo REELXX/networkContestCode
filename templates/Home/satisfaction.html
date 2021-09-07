@@ -14,379 +14,654 @@
   <link rel="mask-icon" href="../static/img/safari-pinned-tab.svg" color="#5bbad5">
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,500;1,500&amp;display=swap"
-    rel="stylesheet">
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,500;1,500&amp;display=swap"
+          rel="stylesheet">
   <link rel="stylesheet" media="all" href="../static/css/super.css">
   <script>var viewportmeta = document.querySelector('meta[name="viewport"]');
-    if (viewportmeta) {
-      if (screen.width < 375) {
-        var newScale = screen.width / 375;
-        viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
-      } else {
-        viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
-      }
+  if (viewportmeta) {
+    if (screen.width < 375) {
+      var newScale = screen.width / 375;
+      viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+    } else {
+      viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
     }
+  }
   </script>
-
+  <link rel="stylesheet" href="../static/9.5/bootstrap.css">
+  <link rel="stylesheet" href="../static/9.5/bootstrap.min.css">
 
 </head>
 
 <body>
-  <script>console.log(localStorage.getItem('darkMode'));
-    if (localStorage.getItem('darkMode') === "on") {
-      document.body.classList.add("dark");
-      document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector('.js-switch-theme input').checked = true;
-      });
-    }
-  </script>
-  <div class="page">
+<script>console.log(localStorage.getItem('darkMode'));
+if (localStorage.getItem('darkMode') === "on") {
+  document.body.classList.add("dark");
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector('.js-switch-theme input').checked = true;
+  });
+}
+</script>
+<div class="page">
 
-    <!--左边侧栏-->
-    <div class="sidebar">
+  <!--左边侧栏-->
+  <div class="sidebar">
 
-      <div class="sidebar__top">
+    <div class="sidebar__top">
 
-        <button class="sidebar__close">
-          <svg class="icon icon-close">
-            <use xlink:href="../static/img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
+      <button class="sidebar__close">
+        <svg class="icon icon-close">
+          <use xlink:href="../static/img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
 
-        <a class="sidebar__logo" href="#">
-          <img class="sidebar__pic sidebar__pic_black" src="../static/img/logo.png" alt="" />
-          <img class="sidebar__pic sidebar__pic_white" src="../static/img/logo-white.png" alt="" />
-        </a>
+      <a class="sidebar__logo" href="#">
+        <img class="sidebar__pic sidebar__pic_black" src="../static/img/logo.png" alt="" />
+        <img class="sidebar__pic sidebar__pic_white" src="../static/img/logo-white.png" alt="" />
+      </a>
 
-        <button class="sidebar__burger"></button>
+      <button class="sidebar__burger"></button>
 
-      </div>
+    </div>
 
-      <div class="sidebar__wrapper">
-        <div class="sidebar__inner">
-          <a class="sidebar__logo" href="#"><img class="sidebar__pic" src="../static/img/logo-sm.png" alt="" /></a>
-          <div class="sidebar__list">
-            <div class="sidebar__group">
-              <div class="sidebar__caption caption-sm"><span>Overview</span></div>
-              <div class="sidebar__menu">
-                <a class="sidebar__item " href="overview.html">
+    <div class="sidebar__wrapper">
+      <div class="sidebar__inner">
+        <a class="sidebar__logo" href="#"><img class="sidebar__pic" src="../static/img/logo-sm.png" alt="" /></a>
+        <div class="sidebar__list">
+          <div class="sidebar__group">
+            <div class="sidebar__caption caption-sm"><span>Overview</span></div>
+            <div class="sidebar__menu">
+              <a class="sidebar__item " href="overview.html">
 
-                  <div class="sidebar__icon">
-                    <svg class="icon icon-overview">
-                      <use xlink:href="../static/img/sprite.svg#icon-overview"></use>
-                    </svg>
-                  </div>
-
-                  <div class="sidebar__text">首页</div>
-                </a>
-              </div>
-            </div>
-
-
-            <div class="sidebar__group">
-
-              <div class="sidebar__caption caption-sm">
-                <span>设备状况监控</span>
-              </div>
-
-              <div class="sidebar__menu">
-
-                <a class="sidebar__item  " href="monitor.html">
-                  <div class="sidebar__icon"><svg class="icon icon-overview">
+                <div class="sidebar__icon">
+                  <svg class="icon icon-overview">
                     <use xlink:href="../static/img/sprite.svg#icon-overview"></use>
-                  </svg></div>
-                  <div class="sidebar__text">站点趋势总览</div>
-                </a>
+                  </svg>
+                </div>
 
-                <a class="sidebar__item " href="detail1.html">
-                  <div class="sidebar__icon"><svg class="icon icon-bag">
-                    <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
-                  </svg></div>
-                  <div class="sidebar__text">位置流量趋势</div>
-                </a>
-
-                <a class="sidebar__item" href="other.html">
-                  <div class="sidebar__icon"><svg class="icon icon-bag">
-                    <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
-                  </svg></div>
-                  <div class="sidebar__text">健康评测总览</div>
-                </a>
-
-                <a class="sidebar__item" href="detail2.html">
-                  <div class="sidebar__icon"><svg class="icon icon-bag">
-                    <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
-                  </svg></div>
-                  <div class="sidebar__text">网络健康细分指标</div>
-                </a>
-              </div>
-
-            </div>
-
-            <div class="sidebar__group">
-              <div class="sidebar__caption caption-sm">工具</div>
-              <div class="sidebar__menu">
-
-
-
-                <a class="sidebar__item" href="userlist.html">
-                  <div class="sidebar__icon"><svg class="icon icon-message">
-                    <use xlink:href="../static/img/sprite.svg#icon-message"></use>
-                  </svg></div>
-                  <div class="sidebar__text">查询用户列表</div>
-                </a>
-
-                <a class="sidebar__item" href="userJourney.html">
-                  <div class="sidebar__icon"><svg class="icon icon-message">
-                    <use xlink:href="../static/img/sprite.svg#icon-message"></use>
-                  </svg></div>
-                  <div class="sidebar__text">查询用户旅程</div>
-                </a>
-
-                <a class="sidebar__item" href="errorDetect.html">
-                  <div class="sidebar__icon"><svg class="icon icon-notification">
-                    <use xlink:href="../static/img/sprite.svg#icon-notification"></use>
-                  </svg></div>
-                  <div class="sidebar__text">消息中心</div>
-                  <div class="sidebar__counter">3</div>
-                </a>
-
-                <a class="sidebar__item active" href="satisfaction.html">
-                  <div class="sidebar__icon"><svg class="icon icon-chat">
-                    <use xlink:href="../static/img/sprite.svg#icon-chat"></use>
-                  </svg></div>
-                  <div class="sidebar__text">扩展功能</div>
-                </a>
-
-              </div>
-
-
+                <div class="sidebar__text">首页</div>
+              </a>
             </div>
           </div>
 
-          <div class="sidebar__profile">
-            <div class="sidebar__details">
 
-              <a class="sidebar__link" href="#">
-                <div class="sidebar__icon"><svg class="icon icon-profile">
-                  <use xlink:href="../static/img/sprite.svg#icon-profile"></use>
-                </svg>
-                </div>
-                <div class="sidebar__text">Profile</div>
+          <div class="sidebar__group">
+
+            <div class="sidebar__caption caption-sm">
+              <span>设备状况监控</span>
+            </div>
+
+            <div class="sidebar__menu">
+
+              <a class="sidebar__item  " href="monitor.html">
+                <div class="sidebar__icon"><svg class="icon icon-overview">
+                  <use xlink:href="../static/img/sprite.svg#icon-overview"></use>
+                </svg></div>
+                <div class="sidebar__text">站点趋势总览</div>
               </a>
 
-
-              <a class="sidebar__link" href="Sign_IN&UP.html">
-                <div class="sidebar__icon"><svg class="icon icon-logout">
-                  <use xlink:href="../static/img/sprite.svg#icon-logout"></use>
+              <a class="sidebar__item " href="detail1.html">
+                <div class="sidebar__icon"><svg class="icon icon-bag">
+                  <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
                 </svg></div>
-                <div class="sidebar__text">Log out</div>
+                <div class="sidebar__text">位置流量趋势</div>
+              </a>
+
+              <a class="sidebar__item" href="other.html">
+                <div class="sidebar__icon"><svg class="icon icon-bag">
+                  <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
+                </svg></div>
+                <div class="sidebar__text">健康评测总览</div>
+              </a>
+
+              <a class="sidebar__item" href="detail2.html">
+                <div class="sidebar__icon"><svg class="icon icon-bag">
+                  <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
+                </svg></div>
+                <div class="sidebar__text">网络健康细分指标</div>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="sidebar__group">
+            <div class="sidebar__caption caption-sm">工具</div>
+            <div class="sidebar__menu">
+
+
+
+              <a class="sidebar__item" href="userlist.html">
+                <div class="sidebar__icon"><svg class="icon icon-message">
+                  <use xlink:href="../static/img/sprite.svg#icon-message"></use>
+                </svg></div>
+                <div class="sidebar__text">查询用户列表</div>
+              </a>
+
+              <a class="sidebar__item" href="userJourney.html">
+                <div class="sidebar__icon"><svg class="icon icon-message">
+                  <use xlink:href="../static/img/sprite.svg#icon-message"></use>
+                </svg></div>
+                <div class="sidebar__text">查询用户旅程</div>
+              </a>
+
+              <a class="sidebar__item" href="userfeedback.html">
+                <div class="sidebar__icon"><svg class="icon icon-message">
+                  <use xlink:href="../static/img/sprite.svg#icon-message"></use>
+                </svg></div>
+                <div class="sidebar__text">用户反馈</div>
+              </a>
+
+              <a class="sidebar__item" href="errorDetect.html">
+                <div class="sidebar__icon"><svg class="icon icon-notification">
+                  <use xlink:href="../static/img/sprite.svg#icon-notification"></use>
+                </svg></div>
+                <div class="sidebar__text">告警中心</div>
+                <div class="sidebar__counter">3</div>
+              </a>
+
+              <a class="sidebar__item  active" href="satisfaction.html">
+                <div class="sidebar__icon"><svg class="icon icon-chat">
+                  <use xlink:href="../static/img/sprite.svg#icon-chat"></use>
+                </svg></div>
+                <div class="sidebar__text">扩展功能</div>
               </a>
 
             </div>
 
-            <a class="sidebar__user" href="#">
-
-              <div class="sidebar__ava"><img class="sidebar__pic" src="../static/img/ava.png" alt="" /></div>
-              <div class="sidebar__desc">
-                <div class="sidebar__man">管理员</div>
-                <div class="sidebar__status caption">administer</div>
-              </div>
-              <div class="sidebar__arrow"><svg class="icon icon-arrows">
-                <use xlink:href="../static/img/sprite.svg#icon-arrows"></use>
-              </svg></div>
-            </a>
 
           </div>
         </div>
+
+        <div class="sidebar__profile">
+          <div class="sidebar__details">
+
+            <a class="sidebar__link" href="#">
+              <div class="sidebar__icon"><svg class="icon icon-profile">
+                <use xlink:href="../static/img/sprite.svg#icon-profile"></use>
+              </svg>
+              </div>
+              <div class="sidebar__text">Profile</div>
+            </a>
+
+
+            <a class="sidebar__link" href="Sign_IN&UP.html">
+              <div class="sidebar__icon"><svg class="icon icon-logout">
+                <use xlink:href="../static/img/sprite.svg#icon-logout"></use>
+              </svg></div>
+              <div class="sidebar__text">Log out</div>
+            </a>
+
+          </div>
+
+          <a class="sidebar__user" href="#">
+
+            <div class="sidebar__ava"><img class="sidebar__pic" src="../static/img/ava.png" alt="" /></div>
+            <div class="sidebar__desc">
+              <div class="sidebar__man">管理员</div>
+              <div class="sidebar__status caption">administer</div>
+            </div>
+            <div class="sidebar__arrow"><svg class="icon icon-arrows">
+              <use xlink:href="../static/img/sprite.svg#icon-arrows"></use>
+            </svg></div>
+          </a>
+
+        </div>
       </div>
-      <div class="sidebar__bottom"><label class="switch switch_theme js-switch-theme"><input class="switch__input"
-                                                                                             type="checkbox" /><span class="switch__in"><span class="switch__box"></span><span class="switch__icon"><svg
-              class="icon icon-moon">
+    </div>
+    <div class="sidebar__bottom"><label class="switch switch_theme js-switch-theme"><input class="switch__input"
+                                                                                           type="checkbox" /><span class="switch__in"><span class="switch__box"></span><span class="switch__icon"><svg
+            class="icon icon-moon">
                 <use xlink:href="../static/img/sprite.svg#icon-moon"></use>
               </svg><svg class="icon icon-sun">
                 <use xlink:href="../static/img/sprite.svg#icon-sun"></use>
               </svg></span></span></label></div>
-    </div>
+  </div>
 
 
-    <div class="page__wrapper">
-      <div class="page__center">
+  <div class="page__wrapper">
+    <div class="page__center">
 
-        <!-- 顶栏 -->
-        <div class="page__row page__row_head page__row_border">
+      <!-- 顶栏 -->
+      <div class="page__row page__row_head page__row_border">
 
-          <div class="page__col">
-            <div class="page__hello h5">实验性功能</div>
-            <div class="page__welcome h2">扩展功能<span class="desktop-hide"></span></div>
-          </div>
-
-          <div class="page__col">
-
-            <!--搜索栏-->
-            <div class="header"><button class="header__burger"></button>
-
-              <div class="search">
-
-                <div class="search__field"><input class="search__input" type="text" placeholder="使用帮助" /><button
-                    class="search__toggle"><svg class="icon icon-search">
-                      <use xlink:href="../static/img/sprite.svg#icon-search"></use>
-                    </svg><svg class="icon icon-close">
-                      <use xlink:href="../static/img/sprite.svg#icon-close"></use>
-                    </svg></button>
-                </div>
-
-                <div class="search__result">
-                  <div class="search__info caption-sm"></div>
-                  <div class="search__list"><a class="search__item" href="#">
-                      <div class="search__preview bg-pink"><img class="search__pic" src="../static/img/figure-1.png"
-                          alt="" />
-                      </div>
-                      <div class="search__text">说明文档<svg class="icon icon-arrow-right">
-                          <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
-                        </svg></div>
-                    </a><a class="search__item" href="#">
-                      <div class="search__preview bg-yellow"><img class="search__pic" src="../static/img/figure-4.png"
-                          alt="" />
-                      </div>
-                      <div class="search__text">使用帮助<svg class="icon icon-arrow-right">
-                          <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
-                        </svg></div>
-                    </a><a class="search__item" href="#">
-                      <div class="search__preview bg-blue-light"><img class="search__pic"
-                          src="../static/img/figure-3.png" alt="" /></div>
-                      <div class="search__text">其他<svg class="icon icon-arrow-right">
-                          <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
-                        </svg></div>
-                    </a></div><button class="search__btn btn btn_purple btn_wide">Advance Search</button>
-                </div>
-
-              </div><button class="header__search"><svg class="icon icon-search">
-                  <use xlink:href="../static/img/sprite.svg#icon-search"></use>
-                </svg></button>
-
-
-              <div class="notifications"><button class="notifications__open"><svg class="icon icon-bell">
-                    <use xlink:href="../static/img/sprite.svg#icon-bell"></use>
-                  </svg><span class="notifications__counter">3</span></button>
-                <div class="notifications__wrap">
-                  <div class="notifications__info h6">运行消息</div>
-
-                  <div class="notifications__list">
-
-
-                    <a class="notifications__item" href="notifications.html">
-                      <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
-                          alt="" />
-                        <div class="notifications__status bg-blue"><img class="notifications__pic"
-                            src="../static/img/chat.svg" alt="" /></div>
-                      </div>
-                      <div class="notifications__details">
-                        <div class="notifications__line">
-                          <div class="notifications__user caption">设备检测助手</div>
-                          <div class="notifications__time caption">8h</div>
-                        </div>
-                        <div class="notifications__text caption-sm">你的设备可能炸了<span
-                            class="notifications__project">系统消息</span></div>
-                      </div>
-
-
-                    </a><a class="notifications__item" href="notifications.html">
-                      <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
-                          alt="" />
-                        <div class="notifications__status bg-green"><img class="notifications__pic"
-                            src="../static/img/bag.svg" alt="" /></div>
-                      </div>
-                      <div class="notifications__details">
-                        <div class="notifications__line">
-                          <div class="notifications__user caption">运行报告</div>
-                          <div class="notifications__time caption">12h</div>
-                        </div>
-                        <div class="notifications__text caption-sm">24内设备的运行报告出炉了！ <span
-                            class="notifications__project">系统信息</span></div>
-                      </div>
-
-
-                    </a><a class="notifications__item" href="notifications.html">
-                      <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
-                          alt="" />
-                        <div class="notifications__status bg-purple"><img class="notifications__pic"
-                            src="../static/img/message.svg" alt="" /></div>
-                      </div>
-                      <div class="notifications__details">
-                        <div class="notifications__line">
-                          <div class="notifications__user caption">用户消息</div>
-                          <div class="notifications__time caption">14h</div>
-                        </div>
-                        <div class="notifications__text caption-sm">用户发来一条消息📪 </div>
-                      </div>
-
-                    </a>
-                  </div>
-                  <div class="notifications__btns"><a class="notifications__btn btn btn_black"
-                      href="/errorDetect.html">查看所有历史记录</a></div>
-                </div>
-              </div><a class="header__user" href="#"><img class="header__pic" src="../static/img/ava.png" alt="" /></a>
-            </div>
-          </div>
+        <div class="page__col">
+          <div class="page__hello h5">实验性功能</div>
+          <div class="page__welcome h2">扩展功能<span class="desktop-hide"></span></div>
         </div>
 
-        <div class="page__content">
+        <div class="page__col">
 
-          <div class="banner">
+          <!--搜索栏-->
+          <div class="header"><button class="header__burger"></button>
 
-            <div class="banner__container" style="background-color:#FA8072;">
-              <div class="banner__preview">
-                <img class="banner__pic" src="../static/img/banner-pic.png" alt="">
+            <div class="search">
+
+              <div class="search__field"><input class="search__input" type="text" placeholder="使用帮助" /><button
+                      class="search__toggle"><svg class="icon icon-search">
+                <use xlink:href="../static/img/sprite.svg#icon-search"></use>
+              </svg><svg class="icon icon-close">
+                <use xlink:href="../static/img/sprite.svg#icon-close"></use>
+              </svg></button>
               </div>
-              <div class="banner__wrap">
-                <div class="banner__title h3">扩展功能</div>
-                <div class="banner__text">以下功能正处于测试中</div>
-              </div>
-            </div>
 
-            <div class="activity">
-
-              <div class="activity__row">
-
-                <div class="activity__col">
-                  <div class="activity__container">
-                    <div class="activity__title h5">用户体验聚类分析</div>
-                    <div id="parallel" style="width:100%;height: 400px; margin-left: 50px; overflow:hidden;"></div>
+              <div class="search__result">
+                <div class="search__info caption-sm"></div>
+                <div class="search__list"><a class="search__item" href="#">
+                  <div class="search__preview bg-pink"><img class="search__pic" src="../static/img/figure-1.png"
+                                                            alt="" />
                   </div>
+                  <div class="search__text">说明文档<svg class="icon icon-arrow-right">
+                    <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
+                  </svg></div>
+                </a><a class="search__item" href="#">
+                  <div class="search__preview bg-yellow"><img class="search__pic" src="../static/img/figure-4.png"
+                                                              alt="" />
+                  </div>
+                  <div class="search__text">使用帮助<svg class="icon icon-arrow-right">
+                    <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
+                  </svg></div>
+                </a><a class="search__item" href="#">
+                  <div class="search__preview bg-blue-light"><img class="search__pic"
+                                                                  src="../static/img/figure-3.png" alt="" /></div>
+                  <div class="search__text">其他<svg class="icon icon-arrow-right">
+                    <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
+                  </svg></div>
+                </a></div><button class="search__btn btn btn_purple btn_wide">Advance Search</button>
+              </div>
+
+            </div><button class="header__search"><svg class="icon icon-search">
+              <use xlink:href="../static/img/sprite.svg#icon-search"></use>
+            </svg></button>
+
+
+            <div class="notifications"><button class="notifications__open"><svg class="icon icon-bell">
+              <use xlink:href="../static/img/sprite.svg#icon-bell"></use>
+            </svg><span class="notifications__counter">3</span></button>
+              <div class="notifications__wrap">
+                <div class="notifications__info h6">运行消息</div>
+
+                <div class="notifications__list">
+
+
+                  <a class="notifications__item" href="notifications.html">
+                    <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
+                                                         alt="" />
+                      <div class="notifications__status bg-blue"><img class="notifications__pic"
+                                                                      src="../static/img/chat.svg" alt="" /></div>
+                    </div>
+                    <div class="notifications__details">
+                      <div class="notifications__line">
+                        <div class="notifications__user caption">设备检测助手</div>
+                        <div class="notifications__time caption">8h</div>
+                      </div>
+                      <div class="notifications__text caption-sm">你的设备可能炸了<span
+                              class="notifications__project">系统消息</span></div>
+                    </div>
+
+
+                  </a><a class="notifications__item" href="notifications.html">
+                  <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
+                                                       alt="" />
+                    <div class="notifications__status bg-green"><img class="notifications__pic"
+                                                                     src="../static/img/bag.svg" alt="" /></div>
+                  </div>
+                  <div class="notifications__details">
+                    <div class="notifications__line">
+                      <div class="notifications__user caption">运行报告</div>
+                      <div class="notifications__time caption">12h</div>
+                    </div>
+                    <div class="notifications__text caption-sm">24内设备的运行报告出炉了！ <span
+                            class="notifications__project">系统信息</span></div>
+                  </div>
+
+
+                </a><a class="notifications__item" href="notifications.html">
+                  <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
+                                                       alt="" />
+                    <div class="notifications__status bg-purple"><img class="notifications__pic"
+                                                                      src="../static/img/message.svg" alt="" /></div>
+                  </div>
+                  <div class="notifications__details">
+                    <div class="notifications__line">
+                      <div class="notifications__user caption">用户消息</div>
+                      <div class="notifications__time caption">14h</div>
+                    </div>
+                    <div class="notifications__text caption-sm">用户发来一条消息📪 </div>
+                  </div>
+
+                </a>
                 </div>
+                <div class="notifications__btns"><a class="notifications__btn btn btn_black"
+                                                    href="/errorDetect.html">查看所有历史记录</a></div>
+              </div>
+            </div><a class="header__user" href="#"><img class="header__pic" src="../static/img/ava.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
 
-                <div class="activity__col">
+      <div class="page__content">
 
+        <div class="banner">
+
+          <div class="banner__container" style="background-color:#FA8072;">
+            <div class="banner__preview">
+              <img class="banner__pic" src="../static/img/banner-pic.png" alt="">
+            </div>
+            <div class="banner__wrap">
+              <div class="banner__title h3">扩展功能</div>
+              <div class="banner__text">以下功能正处于测试中</div>
+            </div>
+          </div>
+
+          <div class="activity">
+
+            <div class="activity__row">
+
+              <div class="activity__col">
+                <div class="activity__container" style="height: 480px">
+                  <div class="activity__title h5">用户体验聚类分析</div>
+                  <div id="parallel" style="width:100%;height: 400px; margin-left: 50px; overflow:hidden;"></div>
+                  <a id="juhe" class="sidebar__item active js-popup-open" href="#juhe-settings" style="width: 70px;height: 30px;transform: translate(800px,-40px)">
+                    <div class="sidebar__text">查看</div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="activity__col"  style="transform: translate(-30px,-35px)">
+
+                <div class="activity__container" style="height: 480px">
                   <div class="activity__title h5">用户满意度占比</div>
                   <div id="4b1609a1e9104d049e0acd026a8e1643" class="chart-container"
-                    style="width:100%; height:400px;overflow:hidden;"></div>
-
+                       style="width:100%; height:400px;overflow:hidden;"></div>
+                  <a id="manyi" class="sidebar__item active js-popup-open" href="#manyi-settings" style="width: 70px;height: 30px;transform: translate(230px,-40px)">
+                    <div class="sidebar__text">查看</div>
+                  </a>
                 </div>
 
-
               </div>
+
+
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!--弹出窗口-->
-  <div class="popup mfp-hide" id="popup-settings">
+<!--弹出窗口-->
+<div class="popup mfp-hide" id="manyi-settings">
+
+  <div class="page__stat page__stat_pt32">
+
+
+
+    <div class="products products_main" id="manyilist">
+      <div class="products__table">
+        <div class="products__row products__row_head">
+          <div class="products__cell" style="width: 0"></div>
+          <div class="products__cell" style="width: 0"></div>
+          <div class="products__cell" style="font-weight: bold;color: black">用户名</div>
+          <div class="products__cell" style="font-weight: bold;color: black">网络参数</div>
+          <div class="products__cell" style="font-weight: bold;color: black">用户等级</div>
+          <div class="products__cell" style="font-weight: bold;color: black">优化</div>
+        </div>
+
+
+        <div class="products__row">
+
+          <div class="products__cell" style="width: 0">
+          </div>
+          <div class="products__cell" style="width: 0">
+          </div>
+
+          <div class="products__cell">
+            <div class="products__payment">郑林昕</div>
+          </div>
+
+
+
+          <div class="products__cell">
+            <div class="products__rating">123</div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__color">
+              <div class="products__text">10</div>
+            </div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__cost">
+
+              <div class="products__color">
+                <button  class="sidebar__item active" style="width: 70px;height: 50px;">
+                  <div class="sidebar__text">加速</div>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="products__row">
+
+          <div class="products__cell" style="width: 0">
+          </div>
+          <div class="products__cell" style="width: 0">
+          </div>
+
+          <div class="products__cell">
+            <div class="products__payment">郑林昕</div>
+          </div>
+
+
+
+          <div class="products__cell">
+            <div class="products__rating">456</div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__color">
+              <div class="products__text">20</div>
+            </div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__cost">
+
+              <div class="products__color">
+                <button  class="sidebar__item active" style="width: 70px;height: 50px;">
+                  <div class="sidebar__text">加速</div>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="products__row">
+
+          <div class="products__cell" style="width: 0">
+          </div>
+          <div class="products__cell" style="width: 0">
+          </div>
+
+          <div class="products__cell">
+            <div class="products__payment">郑林昕</div>
+          </div>
+
+
+
+          <div class="products__cell">
+            <div class="products__rating">789</div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__color">
+              <div class="products__text">30</div>
+            </div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__cost">
+
+              <div class="products__color">
+                <button  class="sidebar__item active" style="width: 70px;height: 50px;">
+                  <div class="sidebar__text">加速</div>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
-  <!-- scripts-->
-  <script src="../static/js/lib/jquery.min.js"></script>
-  <script src="../static/js/lib/owl.carousel.min.js"></script>
-  <script src="../static/js/lib/svg4everybody.min.js"></script>
-  <script src="../static/js/lib/apexcharts.min.js"></script>
-  <script src="../static/js/lib/jquery.magnific-popup.min.js"></script>
-  <script src="../static/js/super.js"></script>
-  <script src="../static/js/charts.js"></script>
+</div>
+<!--弹出窗口-->
+<div class="popup mfp-hide" id="juhe-settings">
 
-  <!--pyecharts-->
-  <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+  <div class="page__stat page__stat_pt32">
+
+
+
+    <div class="products products_main" id="juhelist">
+      <div class="products__table">
+        <div class="products__row products__row_head">
+          <div class="products__cell"></div>
+          <div class="products__cell" style="width: 0"></div>
+          <div class="products__cell" style="font-weight: bold;color: black">用户名</div>
+          <div class="products__cell" style="font-weight: bold;color: black">mac</div>
+          <div class="products__cell" style="font-weight: bold;color: black">所属簇名</div>
+          <div class="products__cell" style="font-weight: bold;color: black">用户等级</div>
+        </div>
+
+        <div class="products__row">
+
+          <div class="products__cell"><label class="checkbox"><input class="checkbox__input"
+                                                                     type="checkbox"><span class="checkbox__in"><span
+                  class="checkbox__tick"></span></span></label>
+          </div>
+          <div class="products__cell" style="width: 0">
+          </div>
+
+          <div class="products__cell">
+            <div class="products__payment">郑林昕</div>
+          </div>
+
+
+
+          <div class="products__cell">
+            <div class="products__rating">123</div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__color">
+              <div class="products__text">A</div>
+            </div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__cost">
+
+              <div class="products__color">
+                10
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="products__row">
+
+          <div class="products__cell"><label class="checkbox"><input class="checkbox__input"
+                                                                     type="checkbox"><span class="checkbox__in"><span
+                  class="checkbox__tick"></span></span></label>
+          </div>
+          <div class="products__cell" style="width: 0">
+          </div>
+
+          <div class="products__cell">
+            <div class="products__payment">郑林昕</div>
+          </div>
+
+
+
+          <div class="products__cell">
+            <div class="products__rating">456</div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__color">
+              <div class="products__text">B</div>
+            </div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__cost">
+
+              <div class="products__color">
+                20
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="products__row">
+
+          <div class="products__cell"><label class="checkbox"><input class="checkbox__input"
+                                                                     type="checkbox"><span class="checkbox__in"><span
+                  class="checkbox__tick"></span></span></label>
+          </div>
+          <div class="products__cell" style="width: 0">
+          </div>
+
+          <div class="products__cell">
+            <div class="products__payment">郑林昕</div>
+          </div>
+
+
+
+          <div class="products__cell">
+            <div class="products__rating">789</div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__color">
+              <div class="products__text">C</div>
+            </div>
+          </div>
+
+          <div class="products__cell">
+            <div class="products__cost">
+
+              <div class="products__color">
+                30
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <button  class="sidebar__item active" style="width: 70px;height: 50px;transform: translate(500px,10px)">
+          <div class="sidebar__text">管理</div>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- scripts-->
+<script src="../static/js/lib/jquery.min.js"></script>
+<script src="../static/js/lib/owl.carousel.min.js"></script>
+<script src="../static/js/lib/svg4everybody.min.js"></script>
+<script src="../static/js/lib/apexcharts.min.js"></script>
+<script src="../static/js/lib/jquery.magnific-popup.min.js"></script>
+<script src="../static/js/super.js"></script>
+<script src="../static/js/charts.js"></script>
+
+<!--pyecharts-->
+<script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
 
 
 </body>
@@ -394,14 +669,14 @@
   //用户满意度占比
   $(document).ready(function () {
     $.ajax({
-      url: "/manyidu",
+      url: "manyiduServlet",
       data: {
       },
       type: "POST",
       dataType: "json",
       success: function (data) {
         var chart_4b1609a1e9104d049e0acd026a8e1643 = echarts.init(
-          document.getElementById('4b1609a1e9104d049e0acd026a8e1643'), 'white', { renderer: 'canvas' });
+                document.getElementById('4b1609a1e9104d049e0acd026a8e1643'), 'white', { renderer: 'canvas' });
         var option_4b1609a1e9104d049e0acd026a8e1643 = {
           "animation": true,
           "animationThreshold": 2000,
@@ -442,16 +717,16 @@
               "clockwise": true,
               "data": [
                 {
-                  "name": "Bad",
-                  "value": data.STSF[0]
+                  "name": "不满意",
+                  "value": data[0]
                 },
                 {
-                  "name": "Normal",
-                  "value": data.STSF[1]
+                  "name": "一般",
+                  "value": data[1]
                 },
                 {
-                  "name": "Excellent",
-                  "value": data.STSF[2]
+                  "name": "满意",
+                  "value": data[2]
                 }
               ],
               "radius": [
@@ -505,6 +780,7 @@
   });
 
 </script>
+
 <script>
   //用户体验聚类分析
   $(document).ready(function () {
@@ -873,13 +1149,13 @@
 
 
     var schema = [
-      { name: 'rssi', index: 0, text: 'rssi' },
-      { name: 'downlinkSpeed', index: 1, text: 'downlinkSpeed' },
-      { name: 'latency', index: 2, text: 'latency' },
-      { name: 'downSpeed', index: 3, text: 'downSpeed' },
-      { name: 'upSpeed', index: 4, text: ' upSpeed' },
-      { name: 'txDiscardRatio', index: 5, text: 'txDiscardRatio' },
-      { name: '体验', index: 6, text: '簇' }
+      { name: '接收信号强度', index: 0, text: '接收信号强度' },
+      { name: '下行链路速度', index: 1, text: '下行链路速度' },
+      { name: '时延', index: 2, text: '时延' },
+      { name: '下载速度', index: 3, text: '下载速度' },
+      { name: '上传速度', index: 4, text: ' 上传速度' },
+      { name: '丢包率', index: 5, text: '丢包率' },
+      { name: '用户群体', index: 6, text: '用户群体' }
     ];
 
     var lineStyle = {
@@ -916,7 +1192,7 @@
         { dim: 5, name: schema[5].text },
         {
           dim: 6, name: schema[6].text,
-          type: 'category', data: ['簇1', '簇2', '簇3']
+          type: 'category', data: ['访客', '普通用户', '高级用户']
         }
       ],
 
@@ -978,255 +1254,139 @@
   });
 
 </script>
-<!--初始用户信息-->
+<!--聚合-->
 <script>
-  $(document).ready(function () {
+
+  $(document).ready(function() {
+    $("#juhelist").empty();
     $.ajax({
-      url: "/getUserInfo",
+      url: "ManyiServlet",
       data: {},
       type: "POST",
       dataType: "json",
-      success: function (data) {
-        $("#popup-settings").empty();
-        var yonghu = "<form class=\"popup__form\">\n" +
+      success:function(data) {
+
+        var juhe = "  <div class=\"products__table\">\n" +
+                "                <div class=\"products__row products__row_head\">\n" +
+                "                    <div class=\"products__cell\"></div>\n" +
+                "                    <div class=\"products__cell\" style=\"width: 0\"></div>\n" +
+                "                    <div class=\"products__cell\" style=\"font-weight: bold;color: black\">用户名</div>\n" +
+                "                    <div class=\"products__cell\" style=\"font-weight: bold;color: black\">mac</div>\n" +
+                "                    <div class=\"products__cell\" style=\"font-weight: bold;color: black\">所属簇名</div>\n" +
+                "                    <div class=\"products__cell\" style=\"font-weight: bold;color: black\">用户等级</div>\n" +
+                "                </div>";
+        $(data).each(function (index, item) {
+          juhe +="  <div class=\"products__row\">\n" +
+                  "\n" +
+                  "                    <div class=\"products__cell\"><label class=\"checkbox\"><input class=\"checkbox__input\"\n" +
+                  "                                                                               type=\"checkbox\"><span class=\"checkbox__in\"><span\n" +
+                  "                            class=\"checkbox__tick\"></span></span></label>\n" +
+                  "                    </div>\n" +
+                  "                    <div class=\"products__cell\" style=\"width: 0\">\n" +
+                  "                    </div>\n" +
+                  "\n" +
+                  "                    <div class=\"products__cell\">\n" +
+                  "                        <div class=\"products__payment\">"+item.username+"</div>\n" +
+                  "                    </div>\n" +
+                  "\n" +
+                  "\n" +
+                  "\n" +
+                  "                    <div class=\"products__cell\">\n" +
+                  "                        <div class=\"products__rating\">"+item.usermac+"</div>\n" +
+                  "                    </div>\n" +
+                  "\n" +
+                  "                    <div class=\"products__cell\">\n" +
+                  "                        <div class=\"products__color\">\n" +
+                  "                            <div class=\"products__text\">"+item.cuming+"</div>\n" +
+                  "                        </div>\n" +
+                  "                    </div>\n" +
+                  "\n" +
+                  "                    <div class=\"products__cell\">\n" +
+                  "                        <div class=\"products__cost\">\n" +
+                  "\n" +
+                  "                            <div class=\"products__color\">\n" +
+                  "                              "+item.userlevel+"\n" +
+                  "                            </div>\n" +
+                  "\n" +
+                  "                        </div>\n" +
+                  "                    </div>\n" +
+                  "                </div>";
+        });
+        juhe += "   <button  class=\"sidebar__item active\" style=\"width: 70px;height: 50px;transform: translate(500px,10px)\">\n" +
+                "                    <div class=\"sidebar__text\">管理</div>\n" +
+                "                </button>\n" +
                 "\n" +
-                "\n" +
-                "        <div class=\"popup__user\">\n" +
-                "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
-                "            <div class=\"popup__title h2 \"></div>\n" +
-                "\n" +
-                "\n" +
-                "            <div class=\"popup__line\">\n" +
-                "\n" +
-                "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
-                "\n" +
-                "                <div class=\"popup__details\">\n" +
-                "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
-                "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
-                "                </div>\n" +
-                "            </div>\n" +
-                "        </div>\n" +
-                "\n" +
-                "        <div class=\"popup__fieldset\">\n" +
-                "\n" +
-                "            <div class=\"popup__row\">\n" +
-                "\n" +
-                "                <div class=\"popup__field field\">\n" +
-                "                    <div class=\"field__label\">用户名</div>\n" +
-                "                    <div class=\"popup__title h4 \">"+data.username+"</div>\n" +
-                "                </div>\n" +
-                "                <div class=\"popup__field field\">\n" +
-                "                    <div class=\"field__label\">绑定邮箱</div>\n" +
-                "                    <div class=\"popup__title h4 \">"+data.email+"</div>\n" +
-                "                </div>\n" +
-                "            </div>\n" +
-                "\n" +
-                "            <div class=\"popup__row\">\n" +
-                "\n" +
-                "                <div class=\"popup__field field\">\n" +
-                "                    <div class=\"field__label\">用户等级</div>\n" +
-                "                    <div class=\"popup__title h4 \">管理员</div>\n" +
-                "                </div>\n" +
-                "\n" +
-                "                <div class=\"popup__field field\">\n" +
-                "                    <div class=\"field__label\">最近登陆IP</div>\n" +
-                "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
-                "                </div>\n" +
-                "            </div>\n" +
-                "\n" +
-                "            <div class=\"popup__row\">\n" +
-                "\n" +
-                "                <div class=\"popup__field field\">\n" +
-                "                    <div class=\"field__label\">所属团体</div>\n" +
-                "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
-                "                </div>\n" +
-                "\n" +
-                "                <div class=\"popup__field field\">\n" +
-                "                    <div class=\"field__label\">账户安全等级</div>\n" +
-                "                    <div class=\"popup__title h4 \">优</div>\n" +
-                "\n" +
-                "                </div>\n" +
-                "\n" +
-                "            </div>\n" +
-                "            <div class=\"popup__btns\">\n" +
-                "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
-                "                <button class=\"popup__btn btn btn_gray\"  id=\"bianji\">编辑</button>\n" +
-                "            </div>\n" +
-                "    </form>";
-        $("#popup-settings").append(yonghu);
+                "            </div>";
+        $("#juhelist").append(juhe);
+
       }
 
     });
   });
 </script>
-<!--开始修改-->
+<!--满意度-->
 <script>
-  $(document).ready(function () {
 
-    $("#popup-settings").on("click","#bianji",function () {
-      $.ajax({
-        url: "/getUserInfo",
-        data: {},
-        type: "POST",
-        dataType: "json",
-        success: function (data) {
-          $("#popup-settings").empty();
-          var yonghu = "<form class=\"popup__form\">\n" +
-                  "\n" +
-                  "\n" +
-                  "     <div class=\"popup__user\">\n" +
-                  "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
-                  "            <div class=\"popup__title h2 \"></div>\n" +
-                  "\n" +
-                  "\n" +
-                  "            <div class=\"popup__line\">\n" +
-                  "\n" +
-                  "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
-                  "\n" +
-                  "                <div class=\"popup__details\">\n" +
-                  "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
-                  "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
-                  "                </div>\n" +
-                  "            </div>\n" +
-                  "        </div>\n" +
-                  "\n" +
-                  "        <div class=\"popup__fieldset\">\n" +
-                  "\n" +
-                  "            <div class=\"popup__row\">\n" +
-                  "\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">用户名:</div>\n" +
-                  "                    <div class=\"popup__title h4 \"><input class='username' type='text'></div>\n" +
-                  "                </div>\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">绑定邮箱</div>\n" +
-                  "                    <div class=\"popup__title h4 \"><input class='email' type='text'></div>\n" +
-                  "                </div>\n" +
-                  "            </div>\n" +
-                  "\n" +
-                  "            <div class=\"popup__row\">\n" +
-                  "\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">用户等级</div>\n" +
-                  "                    <div class=\"popup__title h4 \">管理员</div>\n" +
-                  "                </div>\n" +
-                  "\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">最近登陆IP</div>\n" +
-                  "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
-                  "                </div>\n" +
-                  "            </div>\n" +
-                  "\n" +
-                  "            <div class=\"popup__row\">\n" +
-                  "\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">所属团体</div>\n" +
-                  "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
-                  "                </div>\n" +
-                  "\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">账户安全等级</div>\n" +
-                  "                    <div class=\"popup__title h4 \">优</div>\n" +
-                  "\n" +
-                  "                </div>\n" +
-                  "\n" +
-                  "            </div>\n" +
-                  "            <div class=\"popup__btns\">\n" +
-                  "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
-                  "                <button class=\"popup__btn btn btn_gray\" id=\"queding\">确定</button>\n" +
-                  "            </div>\n" +
-                  "    </form>";
-          $("#popup-settings").append(yonghu);
-        }
-      });
+  $(document).ready(function() {
+    $("#manyilist").empty();
+    $.ajax({
+      url: "ManyiServlet",
+      data: {},
+      type: "POST",
+      dataType: "json",
+      success:function(data) {
 
+        var manyi = "    <div class=\"products__table\">\n" +
+                "                <div class=\"products__row products__row_head\">\n" +
+                "                    <div class=\"products__cell\" style=\"width: 0\"></div>\n" +
+                "                    <div class=\"products__cell\" style=\"width: 0\"></div>\n" +
+                "                    <div class=\"products__cell\" style=\"font-weight: bold;color: black\">用户名</div>\n" +
+                "                    <div class=\"products__cell\" style=\"font-weight: bold;color: black\">mac</div>\n" +
+                "                    <div class=\"products__cell\" style=\"font-weight: bold;color: black\">用户等级</div>\n" +
+                "                    <div class=\"products__cell\" style=\"font-weight: bold;color: black\">优化</div>\n" +
+                "                </div>";
+        $(data).each(function (index, item) {
+          manyi +=" <div class=\"products__row\">\n" +
+                  "\n" +
+                  "                    <div class=\"products__cell\" style=\"width: 0\">\n" +
+                  "                    </div>\n" +
+                  "                    <div class=\"products__cell\" style=\"width: 0\">\n" +
+                  "                    </div>\n" +
+                  "\n" +
+                  "                    <div class=\"products__cell\">\n" +
+                  "                        <div class=\"products__payment\">"+item.username+"</div>\n" +
+                  "                    </div>\n" +
+                  "\n" +
+                  "\n" +
+                  "\n" +
+                  "                    <div class=\"products__cell\">\n" +
+                  "                        <div class=\"products__rating\">"+item.usermac+"</div>\n" +
+                  "                    </div>\n" +
+                  "\n" +
+                  "                    <div class=\"products__cell\">\n" +
+                  "                        <div class=\"products__color\">\n" +
+                  "                            <div class=\"products__text\">"+item.userlevel+"</div>\n" +
+                  "                        </div>\n" +
+                  "                    </div>\n" +
+                  "\n" +
+                  "                    <div class=\"products__cell\">\n" +
+                  "                        <div class=\"products__cost\">\n" +
+                  "\n" +
+                  "                            <div class=\"products__color\">\n" +
+                  "                                <button  class=\"sidebar__item active\" style=\"width: 70px;height: 50px;\">\n" +
+                  "                                    <div class=\"sidebar__text\">加速</div>\n" +
+                  "                                </button>\n" +
+                  "                            </div>\n" +
+                  "\n" +
+                  "                        </div>\n" +
+                  "                    </div>\n" +
+                  "                </div>";
+        });
+        manyi += " </div>";
+        $("#manyilist").append(manyi);
 
-    });
-  });
-</script>
-<!--确定修改-->
-<script>
-  $(document).ready(function () {
+      }
 
-    $("#popup-settings").on("click","#queding",function () {
-      var username=$(".username").val();
-      var email=$(".email").val();
-      $.ajax({
-        url: "/infoChange",
-        data: {username:username,
-          email:email},
-        type: "POST",
-        dataType: "json",
-        success: function (data) {
-          $("#popup-settings").empty();
-          var yonghu = "<form class=\"popup__form\">\n" +
-                  "\n" +
-                  "\n" +
-                  "     <div class=\"popup__user\">\n" +
-                  "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
-                  "            <div class=\"popup__title h2 \"></div>\n" +
-                  "\n" +
-                  "\n" +
-                  "            <div class=\"popup__line\">\n" +
-                  "\n" +
-                  "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
-                  "\n" +
-                  "                <div class=\"popup__details\">\n" +
-                  "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
-                  "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
-                  "                </div>\n" +
-                  "            </div>\n" +
-                  "        </div>\n" +
-                  "\n" +
-                  "        <div class=\"popup__fieldset\">\n" +
-                  "\n" +
-                  "            <div class=\"popup__row\">\n" +
-                  "\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">用户名:</div>\n" +
-                  "                    <div class=\"popup__title h4 \">"+data.username+"</div>\n" +
-                  "                </div>\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">绑定邮箱</div>\n" +
-                  "                    <div class=\"popup__title h4 \">"+data.email+"</div>\n" +
-                  "                </div>\n" +
-                  "            </div>\n" +
-                  "\n" +
-                  "            <div class=\"popup__row\">\n" +
-                  "\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">用户等级</div>\n" +
-                  "                    <div class=\"popup__title h4 \">管理员</div>\n" +
-                  "                </div>\n" +
-                  "\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">最近登陆IP</div>\n" +
-                  "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
-                  "                </div>\n" +
-                  "            </div>\n" +
-                  "\n" +
-                  "            <div class=\"popup__row\">\n" +
-                  "\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">所属团体</div>\n" +
-                  "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
-                  "                </div>\n" +
-                  "\n" +
-                  "                <div class=\"popup__field field\">\n" +
-                  "                    <div class=\"field__label\">账户安全等级</div>\n" +
-                  "                    <div class=\"popup__title h4 \">优</div>\n" +
-                  "\n" +
-                  "                </div>\n" +
-                  "\n" +
-                  "            </div>\n" +
-                  "            <div class=\"popup__btns\">\n" +
-                  "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
-                  "                <button class=\"popup__btn btn btn_gray\" id=\"bianji\">编辑</button>\n" +
-                  "            </div>\n" +
-                  "    </form>";
-          $("#popup-settings").append(yonghu);
-        }
-      });
     });
   });
 </script>

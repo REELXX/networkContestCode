@@ -2,31 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaf92d34-0fad-4d9f-ad4b-8e126796f787" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/文轩.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/21-8-17-1643.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3fcbdcf1-c676-41dd-a194-f3a91153bf16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/login-bg/bg2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/1.pcm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/1.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.py" beforeDir="false" afterPath="$PROJECT_DIR$/2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DeviceInformation/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceInformation/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DeviceInformation/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceInformation/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDN/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SDN/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDN/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SDN/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baidu_ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/baidu_ai.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/networkContestCode" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/login-bg/bg1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/login-bg/bg1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/login-bg/bg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/login-bg/bg3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/login-bg/bg3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/login-bg/bg4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/login-bg/bg4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/lib/apexcharts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/lib/apexcharts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/lib/flot/jquery.flot.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/lib/flot/jquery.flot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/lib/flot/jquery.flot.pie.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/lib/flot/jquery.flot.pie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/lib/flot/jquery.flot.resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/lib/flot/jquery.flot.resize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/lib/flot/jquery.flot.symbol.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/lib/flot/jquery.flot.symbol.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/lib/flot/jquery.flot.tooltip.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/lib/flot/jquery.flot.tooltip.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/lib/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/lib/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/lib/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/lib/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/suanfa/svm/svm (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/suanfa/svm/svm (1).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/suanfa/svm/testSet (1).txt" beforeDir="false" afterPath="$PROJECT_DIR$/suanfa/svm/testSet.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Home/detail1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/detail1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Home/detail2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/detail2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Home/errorDetect.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/errorDetect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home/errorDetect1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Home/errorDetect1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/errorDetect1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Home/monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/monitor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Home/other.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/other.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home/overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Home/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/overview.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Home/overview1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/overview1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Home/satisfaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/satisfaction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Home/userJourney.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/userJourney.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Home/userJourney1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/userJourney1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Home/userlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home/userlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views.py" afterDir="false" />
     </list>
@@ -70,90 +83,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Home/urls.py">
+        <entry file="file://$PROJECT_DIR$/SDN/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SDN/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeviceInformation/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/newapi1.2.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="19" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Home/userJourney1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="551" column="60" lean-forward="true" selection-start-line="551" selection-start-column="60" selection-end-line="551" selection-end-column="60" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Home/userlist.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#3;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeviceInformation/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="224" column="22" selection-start-line="224" selection-start-column="22" selection-end-line="224" selection-end-column="22" />
+            <state relative-caret-position="80">
+              <caret line="273" column="38" lean-forward="true" selection-start-line="273" selection-start-column="38" selection-end-line="273" selection-end-column="38" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -161,11 +96,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg7.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg6.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/suanfa/text.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+            <state>
+              <caret selection-end-line="20" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg5.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/suanfa/knnv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="171" column="76" lean-forward="true" selection-start-line="171" selection-start-column="76" selection-end-line="171" selection-end-column="76" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -174,15 +133,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SDN/views.py">
+        <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg2.jpeg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DeviceInformation/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8424">
-              <caret line="312" column="29" selection-start-line="312" selection-start-column="29" selection-end-line="312" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg3.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg4.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -190,6 +161,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>userList</find>
+      <find>../../static</find>
+      <find>查询用户旅程</find>
+      <find>../../STATIC</find>
+      <find>fr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -198,13 +173,32 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Home/views.py" />
-        <option value="$PROJECT_DIR$/SDN/views.py" />
-        <option value="$PROJECT_DIR$/templates/Home/detail1.html" />
-        <option value="$PROJECT_DIR$/DeviceInformation/urls.py" />
-        <option value="$PROJECT_DIR$/templates/Home/userJourney1.html" />
-        <option value="$PROJECT_DIR$/DeviceInformation/views.py" />
         <option value="$PROJECT_DIR$/views.py" />
+        <option value="$PROJECT_DIR$/baidu_ai.py" />
+        <option value="$PROJECT_DIR$/Home/views.py" />
+        <option value="$PROJECT_DIR$/templates/userfeedback.html" />
+        <option value="$PROJECT_DIR$/templates/Home/detail1.html" />
+        <option value="$PROJECT_DIR$/templates/Home/errorDetect.html" />
+        <option value="$PROJECT_DIR$/templates/Home/monitor.html" />
+        <option value="$PROJECT_DIR$/templates/Home/other.html" />
+        <option value="$PROJECT_DIR$/templates/Home/overview.html" />
+        <option value="$PROJECT_DIR$/templates/Home/overview1.html" />
+        <option value="$PROJECT_DIR$/templates/Home/userJourney(1).html" />
+        <option value="$PROJECT_DIR$/templates/Home/userfeedback.html" />
+        <option value="$PROJECT_DIR$/templates/Home/userJourney.html" />
+        <option value="$PROJECT_DIR$/templates/Home/userJourney1.html" />
+        <option value="$PROJECT_DIR$/templates/Home/userlist.html" />
+        <option value="$PROJECT_DIR$/templates/Home/userJourney(2).html" />
+        <option value="$PROJECT_DIR$/templates/Home/satisfaction.html" />
+        <option value="$PROJECT_DIR$/templates/Home/detail2.html" />
+        <option value="$PROJECT_DIR$/suanfa/svm/svm (1).py" />
+        <option value="$PROJECT_DIR$/2.py" />
+        <option value="$PROJECT_DIR$/DeviceInformation/views.py" />
+        <option value="$PROJECT_DIR$/DeviceInformation/urls.py" />
+        <option value="$PROJECT_DIR$/templates/Home/errorDetect1.html" />
+        <option value="$PROJECT_DIR$/SDN/urls.py" />
+        <option value="$PROJECT_DIR$/SDN/views.py" />
+        <option value="$PROJECT_DIR$/suanfa/knnv.py" />
       </list>
     </option>
   </component>
@@ -225,32 +219,48 @@
         <subPane>
           <expand>
             <path>
-              <item name="HWDS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HWDS" type="462c0819:PsiDirectoryNode" />
+              <item name="21-8-17-1643" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-8-17-1643" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="HWDS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HWDS" type="462c0819:PsiDirectoryNode" />
+              <item name="21-8-17-1643" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-8-17-1643" type="462c0819:PsiDirectoryNode" />
               <item name="DeviceInformation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="HWDS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-8-17-1643" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-8-17-1643" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="21-8-17-1643" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-8-17-1643" type="462c0819:PsiDirectoryNode" />
               <item name="HWDS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="21-8-17-1643" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-8-17-1643" type="462c0819:PsiDirectoryNode" />
               <item name="SDN" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="HWDS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HWDS" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="21-8-17-1643" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-8-17-1643" type="462c0819:PsiDirectoryNode" />
+              <item name="suanfa" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="HWDS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HWDS" type="462c0819:PsiDirectoryNode" />
+              <item name="21-8-17-1643" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-8-17-1643" type="462c0819:PsiDirectoryNode" />
+              <item name="suanfa" type="462c0819:PsiDirectoryNode" />
+              <item name="svm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="21-8-17-1643" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-8-17-1643" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="HWDS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HWDS" type="462c0819:PsiDirectoryNode" />
+              <item name="21-8-17-1643" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-8-17-1643" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="Home" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -271,8 +281,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/img/login-bg" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CCNP\21-8-17-1643\static\img\login-bg" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CCNP\21-8-17-1643\suanfa" />
+      <recent name="D:\CCNP\21-8-17-1643\SDN" />
+      <recent name="D:\CCNP\21-8-17-1643\templates\Home" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -286,8 +306,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.views">
-    <configuration name="api3.9" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.knnv">
+    <configuration name="2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="文轩" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,7 +320,73 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api3.9.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="baidu_ai" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="文轩" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baidu_ai.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="knnv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="文轩" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/suanfa" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/suanfa/knnv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="svm (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="文轩" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/suanfa/svm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/suanfa/svm/svm (1).py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -333,8 +419,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.knnv" />
+        <item itemvalue="Python.2" />
+        <item itemvalue="Python.baidu_ai" />
+        <item itemvalue="Python.svm (1)" />
         <item itemvalue="Python.views" />
-        <item itemvalue="Python.api3.9" />
       </list>
     </recent_temporary>
   </component>
@@ -351,41 +440,55 @@
       <workItem from="1630162811897" duration="3567000" />
       <workItem from="1630244192394" duration="6426000" />
       <workItem from="1630292664999" duration="11845000" />
+      <workItem from="1630819495253" duration="5148000" />
+      <workItem from="1630983386016" duration="594000" />
+      <workItem from="1630995030344" duration="5203000" />
+      <workItem from="1631016916359" duration="7546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11845000" />
+    <option name="totallyTimeSpent" value="30336000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="DB Browser" weight="0.32995737" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15671642" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="DB Execution Console" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" weight="0.32952183" />
-      <window_info anchor="bottom" id="Terminal" weight="0.31600833" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32952183" />
+      <window_info id="DB Browser" order="2" weight="0.32995737" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32952183" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32952183" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3180873" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" weight="0.1444563" />
-      <window_info anchor="right" id="R Packages" weight="0.32995737" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="R Graphics" weight="0.32995737" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32952183" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32952183" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="DB Execution Console" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32952183" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.31600833" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="14" weight="0.32952183" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="R Packages" order="4" weight="0.32995737" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.1444563" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -425,92 +528,17 @@
     </state>
     <state x="731" y="296" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630163909924" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/templates/Home/detail2.html</url>
-          <line>807</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HWDS$api3_9.coverage" NAME="api3.9 Coverage Results" MODIFIED="1630294548290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/21_8_17_1643$getmap.coverage" NAME="getmap Coverage Results" MODIFIED="1630819793496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/21_8_17_1643$2.coverage" NAME="2 Coverage Results" MODIFIED="1631021531712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/21_8_17_1643$knnv.coverage" NAME="knnv Coverage Results" MODIFIED="1631023900096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/suanfa" />
+    <SUITE FILE_PATH="coverage/21_8_17_1643$views.coverage" NAME="views Coverage Results" MODIFIED="1630824382964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/21_8_17_1643$baidu_ai.coverage" NAME="baidu_ai Coverage Results" MODIFIED="1630997037999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/21_8_17_1643$svm__1_.coverage" NAME="svm (1) Coverage Results" MODIFIED="1630996638138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/suanfa/svm" />
     <SUITE FILE_PATH="coverage/HWDS$views.coverage" NAME="views Coverage Results" MODIFIED="1630313128853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Home/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Home/errorDetect.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Home/overview1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Home/overview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Home/userJourney.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13656">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://373da293-52fe-4c32-8a81-a3c81856ea74/schema/main/table/Home_userinfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="7691e4ff-9f86-4c2c-ba7b-45796b86010a">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Home/detail1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="576" column="25" lean-forward="true" selection-start-line="576" selection-start-column="25" selection-end-line="576" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api3.9.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-2030034616/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -518,47 +546,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Home/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-583">
-          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/requirements.txt" />
+    <entry file="file://$PROJECT_DIR$/newapi1.2.txt" />
+    <entry file="file://$PROJECT_DIR$/suanfa/svm/testSet.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/newapi1.2.txt">
+    <entry file="file://$PROJECT_DIR$/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SDN/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="108">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="55" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Home/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/Home/intro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/monitor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="153" column="20" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/overview1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="148" column="20" selection-start-line="148" selection-start-column="20" selection-end-line="148" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/userfeedback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-109">
+          <caret line="170" column="45" selection-start-line="170" selection-start-column="45" selection-end-line="170" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/userJourney.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/userJourney1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Home/userlist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="836">
+          <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -569,53 +649,258 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Home/userJourney1.html">
+    <entry file="file://$PROJECT_DIR$/templates/Home/userJourney(2).html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="551" column="60" lean-forward="true" selection-start-line="551" selection-start-column="60" selection-end-line="551" selection-end-column="60" />
+        <state relative-caret-position="4131">
+          <caret line="153" column="63" selection-start-line="153" selection-start-column="63" selection-end-line="153" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/userJourney(1).html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3942">
+          <caret line="146" column="7" selection-start-line="146" selection-start-column="7" selection-end-line="146" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#script#1;n#html#0;n#!!top" />
+            <element signature="n#script#2;n#html#0;n#!!top" />
+            <element signature="n#script#3;n#html#0;n#!!top" />
+            <element signature="n#script#4;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeviceInformation/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/Home/satisfaction.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="-1674">
+          <caret line="1198" column="18" lean-forward="true" selection-start-line="1198" selection-start-column="18" selection-end-line="1198" selection-end-column="18" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SDN/views.py">
+    <entry file="file://$PROJECT_DIR$/suanfa/fcm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8424">
-          <caret line="312" column="29" selection-start-line="312" selection-start-column="29" selection-end-line="312" selection-end-column="29" />
+        <state relative-caret-position="-2255">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/新增的api(3.8、3.9).py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getmap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baidu_ai.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="153" column="12" lean-forward="true" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="12" />
+          <folding>
+            <element signature="e#197#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api3.9.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/errorDetect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="169" column="20" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/detail2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="1102" column="28" selection-start-line="1102" selection-start-column="28" selection-end-line="1102" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/detail1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7775">
+          <caret line="147" column="24" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviceInformation/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="224" column="22" selection-start-line="224" selection-start-column="22" selection-end-line="224" selection-end-column="22" />
+        <state relative-caret-position="524">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views.py">
+    <entry file="file://$PROJECT_DIR$/Home/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/errorDetect1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="481" column="28" selection-start-line="481" selection-start-column="28" selection-end-line="481" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/other.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6913">
+          <caret line="153" column="20" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Home/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDN/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/suanfa/svm/svm (1).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="103" column="12" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home/Sign_IN&amp;UP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg8.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg7.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg6.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg5.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/login-bg/bg2.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDN/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="273" column="38" lean-forward="true" selection-start-line="273" selection-start-column="38" selection-end-line="273" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviceInformation/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/suanfa/text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="20" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/suanfa/knnv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="171" column="76" lean-forward="true" selection-start-line="171" selection-start-column="76" selection-end-line="171" selection-end-column="76" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

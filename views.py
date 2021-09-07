@@ -19,7 +19,10 @@ conn.request("POST", "/rest/campusclientwebsite/v1/journey/nodelist?=&=", payloa
 res = conn.getresponse()
 data = res.read().decode("utf-8")
 data = json.loads(data)
-print(data['data'])
+#print(data['data'])
+for i in range(10):
+    print(data['data'][i])
+    # print(data['data'][i]['nodeKpi'])
 # a = 0
 # for i in data['data']:
 #     try:

@@ -219,7 +219,7 @@ for i in range(len(data['data'])):
         # print(liveTime)
     except:
         liveTime.append(0)
-    if liveTime[i] == 0 :
+    if liveTime[i] == 0:
         pingFen = 0
         situation.append("接入错误")
         color.append('#FF0000')
@@ -229,8 +229,8 @@ for i in range(len(data['data'])):
         situation.append("接入成功")
         color.append('#5dd375')
         pingjia.append('良好')
-    jourDir = {'accTime': data['data'][i]['accTime'], 'huoyuetime': int(liveTime[i]/60),
-               'pingfen': pingFen,'situation':situation[i],'color':color[i],'pingjia':pingjia[i]}
+    jourDir = {'accTime': data['data'][i]['accTime'], 'huoyuetime': int(liveTime[i] / 60),
+               'pingfen': pingFen, 'situation': situation[i], 'color': color[i], 'pingjia': pingjia[i]}
 
     jourList.append(jourDir)
 
@@ -247,7 +247,11 @@ def getUserWay(request):
 
 
 def errorDetect(request):
-    return render(request, 'Home/errorDetect.html')
+    return render(request, 'Home/errorDetect1.html')
+
+
+def userfeedback(request):
+    return render(request, 'Home/userfeedback.html')
 
 
 def userlist(request):
@@ -255,4 +259,4 @@ def userlist(request):
 
 
 def userJourney(request):
-    return render(request, 'Home/userJourney1.html')
+    return render(request, 'Home/userJourney(2).html')

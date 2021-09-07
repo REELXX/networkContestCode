@@ -1453,7 +1453,7 @@
             // backwards-compat stuff - to be removed in future
             if (!ranges[key]) {
                 axis = coord == "x" ? xaxes[0] : yaxes[0];
-                from = ranges[coord + "1"];
+                from = ranges[coord + "bg1.jpg"];
                 to = ranges[coord + "2"];
             }
 

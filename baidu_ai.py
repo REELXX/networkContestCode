@@ -161,8 +161,8 @@ with open("1.pcm", 'rb') as fp:
 res = client.asr(file_context, 'pcm', 16000, {
     'dev_pid': 1537,
 })
-
-print(res['result'][0])  # 提取字典中 result 后信息
+print(res)
+#print(res['result'][0])  # 提取字典中 result 后信息
 res_str = res["result"][0]
 
 voice_recognition(res_str)  # 数据处理

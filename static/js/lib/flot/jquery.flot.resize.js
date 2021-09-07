@@ -55,6 +55,6 @@ can just fix the size of their placeholders.
         init: init,
         options: options,
         name: 'resize',
-        version: '1.0'
+        version: 'bg1.jpg.0'
     });
 })(jQuery);

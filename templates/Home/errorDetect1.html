@@ -2,8 +2,9 @@
 <html lang="ru">
 
 <head>
+
   <meta charset="utf-8">
-  <title>Comments</title>
+  <title>错误检测</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -12,22 +13,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon-16x16.png">
   <link rel="manifest" href="../static/img/site.webmanifest">
   <link rel="mask-icon" href="../static/img/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Ultimate Multipurpose HTML Dashboard Kit">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@ui8">
-  <meta name="twitter:title" content="Unity">
-  <meta name="twitter:description" content="Ultimate Multipurpose HTML Dashboard Kit">
-  <meta name="twitter:creator" content="@ui8">
-  <meta name="twitter:image" content="https://ui8-unity.herokuapp.com/img/twitter-card.jpg">
-  <meta property="og:title" content="Unity">
-  <meta property="og:type" content="Article">
-  <meta property="og:url" content="https://ui8-unity.herokuapp.com/index.html">
-  <meta property="og:image" content="https://ui8-unity.herokuapp.com/img/fb-og-image.jpg">
-  <meta property="og:description" content="Ultimate Multipurpose HTML Dashboard Kit">
-  <meta property="og:site_name" content="Unity">
-  <meta property="fb:admins" content="132951670226590">
+
   <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,500;1,500&amp;display=swap"
           rel="stylesheet">
@@ -42,10 +28,20 @@
     }
   }
   </script>
-
+  <link rel="stylesheet" href="../static/9.5/bootstrap.css">
+  <link rel="stylesheet" href="../static/9.5/bootstrap.min.css">
+  <style type="text/css">
+    .products__table{
+      font-weight: bold;
+      color: black;
+    }
+  </style>
+  <link rel="stylesheet" href="../static/9.5/bootstrap.css">
+  <link rel="stylesheet" href="../static/9.5/bootstrap.min.css">
 </head>
 
 <body>
+
 <script>console.log(localStorage.getItem('darkMode'));
 if (localStorage.getItem('darkMode') === "on") {
   document.body.classList.add("dark");
@@ -107,18 +103,32 @@ if (localStorage.getItem('darkMode') === "on") {
 
             <div class="sidebar__menu">
 
-              <a class="sidebar__item " href="monitor.html">
+              <a class="sidebar__item  " href="monitor.html">
                 <div class="sidebar__icon"><svg class="icon icon-overview">
                   <use xlink:href="../static/img/sprite.svg#icon-overview"></use>
                 </svg></div>
-                <div class="sidebar__text">根站点信息</div>
+                <div class="sidebar__text">站点趋势总览</div>
+              </a>
+
+              <a class="sidebar__item " href="detail1.html">
+                <div class="sidebar__icon"><svg class="icon icon-bag">
+                  <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
+                </svg></div>
+                <div class="sidebar__text">位置流量趋势</div>
               </a>
 
               <a class="sidebar__item" href="other.html">
                 <div class="sidebar__icon"><svg class="icon icon-bag">
                   <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
                 </svg></div>
-                <div class="sidebar__text">站点健康评测体系</div>
+                <div class="sidebar__text">健康评测总览</div>
+              </a>
+
+              <a class="sidebar__item" href="detail2.html">
+                <div class="sidebar__icon"><svg class="icon icon-bag">
+                  <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
+                </svg></div>
+                <div class="sidebar__text">网络健康细分指标</div>
               </a>
             </div>
 
@@ -128,6 +138,8 @@ if (localStorage.getItem('darkMode') === "on") {
             <div class="sidebar__caption caption-sm">工具</div>
             <div class="sidebar__menu">
 
+
+
               <a class="sidebar__item" href="userlist.html">
                 <div class="sidebar__icon"><svg class="icon icon-message">
                   <use xlink:href="../static/img/sprite.svg#icon-message"></use>
@@ -135,11 +147,25 @@ if (localStorage.getItem('darkMode') === "on") {
                 <div class="sidebar__text">查询用户列表</div>
               </a>
 
+              <a class="sidebar__item" href="userJourney.html">
+                <div class="sidebar__icon"><svg class="icon icon-message">
+                  <use xlink:href="../static/img/sprite.svg#icon-message"></use>
+                </svg></div>
+                <div class="sidebar__text">查询用户旅程</div>
+              </a>
+
+              <a class="sidebar__item" href="userfeedback.html">
+                <div class="sidebar__icon"><svg class="icon icon-message">
+                  <use xlink:href="../static/img/sprite.svg#icon-message"></use>
+                </svg></div>
+                <div class="sidebar__text">用户反馈</div>
+              </a>
+
               <a class="sidebar__item active" href="errorDetect.html">
                 <div class="sidebar__icon"><svg class="icon icon-notification">
                   <use xlink:href="../static/img/sprite.svg#icon-notification"></use>
                 </svg></div>
-                <div class="sidebar__text">消息中心</div>
+                <div class="sidebar__text">告警中心</div>
                 <div class="sidebar__counter">3</div>
               </a>
 
@@ -168,7 +194,7 @@ if (localStorage.getItem('darkMode') === "on") {
             </a>
 
 
-            <a class="sidebar__link" href="/Sign_IN&UP.html">
+            <a class="sidebar__link" href="Sign_IN&UP.html">
               <div class="sidebar__icon"><svg class="icon icon-logout">
                 <use xlink:href="../static/img/sprite.svg#icon-logout"></use>
               </svg></div>
@@ -209,7 +235,7 @@ if (localStorage.getItem('darkMode') === "on") {
 
         <div class="page__col">
           <div class="page__hello h5">设备运行</div>
-          <div class="page__welcome h2">消息中心<span class="desktop-hide"></span></div>
+          <div class="page__welcome h2">告警中心<span class="desktop-hide"></span></div>
         </div>
 
         <div class="page__col">
@@ -230,20 +256,22 @@ if (localStorage.getItem('darkMode') === "on") {
               <div class="search__result">
                 <div class="search__info caption-sm"></div>
                 <div class="search__list"><a class="search__item" href="#">
-                  <div class="search__preview bg-pink"><img class="search__pic" src="../static/img/figure-1.png" alt="" />
+                  <div class="search__preview bg-pink"><img class="search__pic" src="../static/img/figure-1.png"
+                                                            alt="" />
                   </div>
                   <div class="search__text">说明文档<svg class="icon icon-arrow-right">
                     <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
                   </svg></div>
                 </a><a class="search__item" href="#">
-                  <div class="search__preview bg-yellow"><img class="search__pic" src="../static/img/figure-4.png" alt="" />
+                  <div class="search__preview bg-yellow"><img class="search__pic" src="../static/img/figure-4.png"
+                                                              alt="" />
                   </div>
                   <div class="search__text">使用帮助<svg class="icon icon-arrow-right">
                     <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
                   </svg></div>
                 </a><a class="search__item" href="#">
-                  <div class="search__preview bg-blue-light"><img class="search__pic" src="../static/img/figure-3.png"
-                                                                  alt="" /></div>
+                  <div class="search__preview bg-blue-light"><img class="search__pic"
+                                                                  src="../static/img/figure-3.png" alt="" /></div>
                   <div class="search__text">其他<svg class="icon icon-arrow-right">
                     <use xlink:href="../static/img/sprite.svg#icon-arrow-right"></use>
                   </svg></div>
@@ -265,9 +293,10 @@ if (localStorage.getItem('darkMode') === "on") {
 
 
                   <a class="notifications__item" href="notifications.html">
-                    <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png" alt="" />
-                      <div class="notifications__status bg-blue"><img class="notifications__pic" src="../static/img/chat.svg"
-                                                                      alt="" /></div>
+                    <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
+                                                         alt="" />
+                      <div class="notifications__status bg-blue"><img class="notifications__pic"
+                                                                      src="../static/img/chat.svg" alt="" /></div>
                     </div>
                     <div class="notifications__details">
                       <div class="notifications__line">
@@ -280,9 +309,10 @@ if (localStorage.getItem('darkMode') === "on") {
 
 
                   </a><a class="notifications__item" href="notifications.html">
-                  <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png" alt="" />
-                    <div class="notifications__status bg-green"><img class="notifications__pic" src="../static/img/bag.svg"
-                                                                     alt="" /></div>
+                  <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
+                                                       alt="" />
+                    <div class="notifications__status bg-green"><img class="notifications__pic"
+                                                                     src="../static/img/bag.svg" alt="" /></div>
                   </div>
                   <div class="notifications__details">
                     <div class="notifications__line">
@@ -295,7 +325,8 @@ if (localStorage.getItem('darkMode') === "on") {
 
 
                 </a><a class="notifications__item" href="notifications.html">
-                  <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png" alt="" />
+                  <div class="notifications__ava"><img class="notifications__pic" src="../static/img/ava-1.png"
+                                                       alt="" />
                     <div class="notifications__status bg-purple"><img class="notifications__pic"
                                                                       src="../static/img/message.svg" alt="" /></div>
                   </div>
@@ -326,68 +357,43 @@ if (localStorage.getItem('darkMode') === "on") {
               <img class="banner__pic" src="../static/img/banner-pic.png" alt="">
             </div>
             <div class="banner__wrap">
-              <div class="banner__title h3">收到3条消息！</div>
-              <div class="banner__text">Receive three messages</div><button
-                    class="banner__btn btn btn_white">Mark all as read</button>
+              <div class="banner__title h3">收到n条警告！</div>
+              <div class="banner__text">Receive n warnings</div><button class="banner__btn btn btn_white">Mark all
+              as read</button>
             </div>
           </div>
 
-          <div class="activity">
-            <div class="activity__row">
-              <div class="activity__col">
-                <div class="activity__container">
+          <div class="activity" >
+            <div class="activity__row" >
+              <div class="active__col" ><div class="activity__container" style="width: 1350px;">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="ibox">
+                      <div class="ibox-content">
+                        <div class="table-responsive">
+                          <div class="products__table" style="width: 100%;transform: translate(-20px,0)">
+                            <div class="products__row products__row_head" >
+                              <div class="products__cell" style="width: 0"></div>
+                              <div class="products__cell" style="font-weight: bold;color: black">优先级</div>
+                              <div class="products__cell"style="font-weight: bold;color: black">问题类型</div>
+                              <div class="products__cell" style="width: 25%"></div>
+                              <div class="products__cell"style="font-weight: bold;color: black;width: 12%">设备角色</div>
+                              <div class="products__cell"style="font-weight: bold;color: black;width: 12%">问题数据</div>
+                              <div class="products__cell"style="font-weight: bold;color: black">站点计数（区域）</div>
+                              <div class="products__cell"style="font-weight: bold;color: black">上次发生时间</div>
+                            </div>
+                          </div>
+                          <table id="list" class="table table-striped" style="width: 100%">
+                          </table>
 
-                  <div class="activity__title h6">消息来源</div>
-                  <div class="activity__inner">
-
-                    <div class="activity__variants"><label class="checkbox"><input class="checkbox__input"
-                                                                                   type="checkbox"><span class="checkbox__in"><span class="checkbox__tick"></span><span
-                            class="checkbox__text">系统</span></span></label><label class="checkbox"><input
-                            class="checkbox__input" type="checkbox" checked><span class="checkbox__in"><span
-                            class="checkbox__tick"></span><span class="checkbox__text">用户</span></span></label>
-                    </div>
-
-
-                    <div class="activity__group">
-                      <div class="list">
+                        </div>
 
                       </div>
-                      <div class="activity__btns"><button class="activity__btn btn btn_black" id="loadmore">刷新</button></div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </div></div></div>
 
 
-              <div class="activity__col">
-
-                <div class="activity__title h6">发布消息</div>
-                <div class="editor">
-
-                  <div class="editor__wrap">
-
-                    <div class="editor__head">
-
-                      <div class="editor__control"><button class="editor__action"><svg class="icon icon-editor-smile">
-                        <use xlink:href="../static/img/sprite.svg#icon-editor-smile"></use>
-                      </svg></button><button class="editor__action active"><svg class="icon icon-editor-bold">
-                        <use xlink:href="../static/img/sprite.svg#icon-editor-bold"></use>
-                      </svg></button><button class="editor__action"><svg class="icon icon-editor-italic">
-                        <use xlink:href="../static/img/sprite.svg#icon-editor-italic"></use>
-                      </svg></button><button class="editor__action"><svg class="icon icon-editor-pic">
-                        <use xlink:href="../static/img/sprite.svg#icon-editor-pic"></use>
-                      </svg></button></div>
-                    </div>
-
-                    <div class="editor__body">
-                      <div class="editor__field"><textarea class="editor__textarea" placeholder="text ..."></textarea>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div><button class="editor__btn btn btn_black btn_wide">Reply Comment</button>
-              </div>
             </div>
           </div>
         </div>
@@ -468,130 +474,39 @@ if (localStorage.getItem('darkMode') === "on") {
 <script src="../static/js/lib/jquery.magnific-popup.min.js"></script>
 <script src="../static/js/super.js"></script>
 <script src="../static/js/charts.js"></script>
+
 </body>
-<%--初始警告信息--%>
 <script>
   $(document).ready(function () {
     $.ajax({
-      url: "ErrorServlet",
-      data: {},
+      url: "/errorDetectInfo",
+      data: {
+      },
       type: "POST",
       dataType: "json",
       success: function (data) {
-        var errorlist=[];
-        for (i=1;i<data.length;i++){
-          errorlist[i-1]=data[i];
-        }
-        var jinggao =  "<div class=\"activity__list\">" +
-                "<div class=\"activity__item active system error\">\n" +
-                "\n" +
-                "                            <div class=\"activity__ava\"><img class=\"activity__pic\" src=\"../static/img/ava-4.png\" alt=\"\">\n" +
-                "                              <div class=\"activity__status\"><img class=\"activity__pic\" src=\"../static/img/chat-black.svg\" alt=\"\">\n" +
-                "                              </div>\n" +
-                "                            </div>\n" +
-                "\n" +
-                "                            <div class=\"activity__details\">\n" +
-                "                              <div class=\"activity__author title\">用户"+parseInt(Math.random()*(99+1),10)+"</div>\n" +
-                "                              <div class=\"activity__line caption\">\n" +
-                "                                <div class=\"activity__category\">反馈信息</div>\n" +
-                "                                <div class=\"activity__info\"> 已读 </div>\n" +
-                "                                <div class=\"activity__time\">"+data[0].readtime+"</div>\n" +
-                "                              </div>\n" +
-                "                              <div class=\"activity__text\">"+data[0].error+"</div>\n" +
-                "                            </div>\n" +
-                "\n" +
-                "                          </div>\n";
-        $(errorlist).each(function (index, item) {
-          jinggao +=       "                          <div class=\"activity__item system normal\" style='width: 400px'>\n" +
-                  "                            <div class=\"activity__ava\"><img class=\"activity__pic\" src=\"../static/img/ava-4.png\" alt=\"\">\n" +
-                  "                              <div class=\"activity__status\"><img class=\"activity__pic\" src=\"../static/img/chat-black.svg\" alt=\"\">\n" +
-                  "                              </div>\n" +
-                  "                            </div>\n" +
-                  "                            <div class=\"activity__details\">\n" +
-                  "                              <div class=\"activity__author title\">用户"+parseInt(Math.random()*(99+1),10)+"</div>\n" +
-                  "                              <div class=\"activity__line caption\">\n" +
-                  "                                <div class=\"activity__category\">反馈信息</div>\n" +
-                  "                                <div class=\"activity__info\">已读</div>\n" +
-                  "                                <div class=\"activity__time\">"+item.readtime+"</div>\n" +
-                  "                              </div>\n" +
-                  "                              <div class=\"activity__text\">"+item.error+"</div>\n" +
-                  "                            </div>\n" +
-                  "\n" +
-                  "                          </div>\n";
+
+        var list = " <tbody>" +
+                "<tr>\n" +
+                " </tr>";
+        $(data.question).each(function (index, item) {
+          list += "<tr>\n" +
+                  "                              <td style=\"color:#FF8B70; width: 4%\">P1</td>\n" +
+                  "                              <td style=\"color: #6F5CCD; width: 17%\">"+item.problemType+"</td>\n" +
+                  "                              <td style=\"width: 17%\"></td>\n" +
+                  "                              <td style=\"width: 10%\">"+item.deviceRole+"</td>\n" +
+                  "                              <td style=\"width: 15%;color: red\">"+item.problem+"</td>\n" +
+                  "                              <td style=\"width: 12%\">深圳</td>\n" +
+                  "                              <td>"+item.lastTime+"</td>\n" +
+                  "                            </tr>";
         });
-        jinggao += "</div>";
-        $(".list").append(jinggao);
+        list += "</tbody>";
+        $("#list").append(list);
       }
 
     });
-  });
-</script>
-<%--点击--%>
-<script>
-  $('.list').on('click','.activity__item', function () {
-    $('.activity__item').removeClass('active');
-    $(this).toggleClass('active');
-  });
-</script>
-<%--刷新--%>
-<script>
-  $(document).ready(function () {
-    $("#loadmore").click(function () {
-      $(".activity__list").empty();
-      $.ajax({
-        url: "ErrorServlet",
-        data: {},
-        type: "POST",
-        dataType: "json",
-        success: function (data) {
-          var errorlist=[];
-          for (i=1;i<data.length;i++){
-            errorlist[i-1]=data[i];
-          }
-          var jinggao =  "<div class=\"activity__list\">" +
-                  "<div class=\"activity__item active system error\">\n" +
-                  "\n" +
-                  "                            <div class=\"activity__ava\"><img class=\"activity__pic\" src=\"../static/img/ava-4.png\" alt=\"\">\n" +
-                  "                              <div class=\"activity__status\"><img class=\"activity__pic\" src=\"../static/img/chat-black.svg\" alt=\"\">\n" +
-                  "                              </div>\n" +
-                  "                            </div>\n" +
-                  "\n" +
-                  "                            <div class=\"activity__details\">\n" +
-                  "                              <div class=\"activity__author title\">用户"+parseInt(Math.random()*(99+1),10)+"</div>\n" +
-                  "                              <div class=\"activity__line caption\">\n" +
-                  "                                <div class=\"activity__category\">反馈信息</div>\n" +
-                  "                                <div class=\"activity__info\"> 已读 </div>\n" +
-                  "                                <div class=\"activity__time\">"+data[0].readtime+"</div>\n" +
-                  "                              </div>\n" +
-                  "                              <div class=\"activity__text\">"+data[0].error+"</div>\n" +
-                  "                            </div>\n" +
-                  "\n" +
-                  "                          </div>\n";
-          $(errorlist).each(function (index, item) {
-            jinggao +=       "                          <div class=\"activity__item system normal\">\n" +
-                    "                            <div class=\"activity__ava\"><img class=\"activity__pic\" src=\"../static/img/ava-4.png\" alt=\"\">\n" +
-                    "                              <div class=\"activity__status\"><img class=\"activity__pic\" src=\"../static/img/chat-black.svg\" alt=\"\">\n" +
-                    "                              </div>\n" +
-                    "                            </div>\n" +
-                    "                            <div class=\"activity__details\">\n" +
-                    "                              <div class=\"activity__author title\">用户"+parseInt(Math.random()*(99+1),10)+"</div>\n" +
-                    "                              <div class=\"activity__line caption\">\n" +
-                    "                                <div class=\"activity__category\">反馈信息</div>\n" +
-                    "                                <div class=\"activity__info\">已读</div>\n" +
-                    "                                <div class=\"activity__time\">"+item.readtime+"</div>\n" +
-                    "                              </div>\n" +
-                    "                              <div class=\"activity__text\">"+item.error+"</div>\n" +
-                    "                            </div>\n" +
-                    "\n" +
-                    "                          </div>\n";
-          });
-          jinggao += "</div>";
-          $(".list").append(jinggao);
-        }
-
-      });
-    });
 
   });
+
 </script>
 </html>

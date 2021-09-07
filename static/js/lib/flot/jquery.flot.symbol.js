@@ -66,6 +66,6 @@
     $.plot.plugins.push({
         init: init,
         name: 'symbols',
-        version: '1.0'
+        version: 'bg1.jpg.0'
     });
 })(jQuery);

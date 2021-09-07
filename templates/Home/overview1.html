@@ -139,7 +139,14 @@
                                     </div>
                                     <div class="sidebar__text">查询用户旅程</div>
                                 </a>
-
+<a class="sidebar__item" href="userfeedback.html">
+                  <div class="sidebar__icon">
+                    <svg class="icon icon-message">
+                      <use xlink:href="../static/img/sprite.svg#icon-message"></use>
+                    </svg>
+                  </div>
+                  <div class="sidebar__text">用户反馈</div>
+                </a>
                                 <a class="sidebar__item" href="errorDetect.html">
                                     <div class="sidebar__icon">
                                         <svg class="icon icon-notification">
@@ -301,13 +308,14 @@
                                 </button>
                                 <div class="speak__wrap">
                                     <div class="speak__info h4">请开始说话...</div>
-                                    <a class="speak__item" href="speak.html">
-                                        <div class="speak__user caption">当前设备情况</div>
-                                        <i
-                                            style="width:20px;height:20px;border-radius:50%;background-color:red;display: block"></i>
-                                    </a>
-
+                                    <div class="speak__item">
+                                        <div class="speak__user caption">郑林昕满意度较差</div>
+                                    </div>
+                                    <button id="huifu" class="sidebar__item active" style="width: 20%;height: 30px;transform: translate(250px,10px)">
+                                        <div class="sidebar__text">回复</div>
+                                    </button>
                                 </div>
+
                             </div>
                             <a class="header__user" href="#"><img class="header__pic" src="../static/img/ava.png"
                                     alt="" /></a>
@@ -496,11 +504,10 @@
     <script src="../static/js/mycharts/pyecharts-circle.js"></script>
     <script src="../static/js/mycharts/yonghu.js"></script>
     <script src="../static/js/mycharts/jinggao.js"></script>
-</body>
+</body><!--语音开始-->
 <script>
     $(document).ready(function () {
         var i = 0;
-        //搜索 返回data加tenantId，id，startTime，endTime的类
         $(".speak__open").click(function () {
             i++;
             $(".speak__item").empty();
@@ -517,10 +524,17 @@
                         if(data.url){
                             window.location.href = data.url
                         }
-                        $(".speak__info").text(data.voice_detect);
-                        var deng = "<div class=\"speak__user caption\">当前设备情况</div>\n" +
+                        if(data.AI=="郑林昕"){
+                            var zhineng = "<div class=\"speak__user caption\">郑林昕的满意度较差</div>\n" ;
+                            $(".speak__item").append(zhineng);
+                        }
+                        if(data.AI=="设备情况"){
+                            var deng = "<div class=\"speak__user caption\">当前设备情况</div>\n" +
                             "<i style=\"width:20px;height:20px;border-radius:50%;background-color:" + data.color + ";display: block\"></i>";
-                        $(".speak__item").append(deng);
+                            $(".speak__item").append(deng);
+                        }
+                        $(".speak__info").text(data.voice_detect);
+
                     }
 
                 });
@@ -528,7 +542,49 @@
         });
     });
 </script>
-<!--初始用户信息-->
+<!--语音回复-->
+<script>
+    $(document).ready(function () {
+
+        $("#huifu").click(function () {
+
+            $(".speak__item").empty();
+            $(".speak__info").text("请开始说话...");
+                $.ajax({
+                    url: "/voice_detect",
+                    data: {},
+                    type: "POST",
+                    dataType: "json",
+                    success: function (data) {
+
+                        console.log(data);
+                        if(data.url){
+                            window.location.href = data.url
+                        }
+                        if(data.AI=="郑林昕"){
+                            var zhineng = "<div class=\"speak__user caption\">郑林昕的满意度较差</div>\n" ;
+                            $(".speak__item").append(zhineng);
+                        }
+                        if (data.AI=="原因"){
+                            var zhineng = "<div class=\"speak__user caption\">网速慢的离谱<div>\n" ;
+                            $(".speak__item").append(zhineng);
+                        }
+                        if (data.AI=="优化"){
+                            var zhineng = "<div class=\"speak__user caption\">对着本网站大喊：给爷优化<div>\n" ;
+                            $(".speak__item").append(zhineng);
+                        }
+                        if(data.AI=="设备情况"){
+                            var deng = "<div class=\"speak__user caption\">当前设备情况</div>\n" +
+                                "<i style=\"width:20px;height:20px;border-radius:50%;background-color:" + data.color + ";display: block\"></i>";
+                            $(".speak__item").append(deng);
+                        }
+                        $(".speak__info").text(data.voice_detect);
+                    }
+                });
+        });
+    });
+</script>
+<!-- 初始用户信息 -->
 <script>
     $(document).ready(function () {
         $.ajax({
