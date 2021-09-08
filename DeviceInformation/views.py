@@ -246,8 +246,7 @@ def getUserWay(request):
     })
 
 
-def errorDetect(request):
-    return render(request, 'Home/errorDetect1.html')
+
 
 
 def userfeedback(request):
@@ -259,4 +258,4 @@ def userlist(request):
 
 
 def userJourney(request):
-    return render(request, 'Home/userJourney(2).html')
+    return render(request, 'Home/userJourney.html')

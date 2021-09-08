@@ -143,8 +143,8 @@ def infoChange(request):
 
 
 # 返回
-def overview(request):
-    return render(request, 'Home/overview.html')
+def overview1(request):
+    return render(request, 'Home/overview1.html')
 
 
 # def twoone(request):
@@ -156,9 +156,9 @@ def overview(request):
 '''
 语音输入模块
 '''
-APP_ID = "23721149"
-API_KEY = "PVCVwFs9TO7CMHvWVw8oac9M"
-SECRET_KEY = "GhKxkUGLhUTEieXeRZYgphgao0QQcKTL"
+APP_ID = "24814153"
+API_KEY = "3qg6j5shEOUdfBMENNashNqQ"
+SECRET_KEY = "Frs4HSY2h9wD5gtt3L8gXnAMz7hzF2cA "
 
 client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
 CHUNK = 1024
@@ -296,10 +296,12 @@ def voice_detect(request):
     for i in url_dict.keys():
         if i in res_str:
             url = url_dict[i]
-    ai = ['原因', '郑林昕', '设备情况', '优化']
+    ai = ['原因', '我', '设备情况', '优化']
+
     for i in range(len(ai)):
         if ai[i] in res_str:
             AI = ai[i]
+            url = False
 
     return JsonResponse({'url': url, 'voice_detect': res_str, 'color': color, 'AI': AI})
 

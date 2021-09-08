@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>用户列表</title>
+  <title>用户旅程</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -43,7 +43,7 @@
   <div class="page page_other">
 
     <!--左边侧栏-->
-            <div class="sidebar">
+           <div class="sidebar">
 
             <div class="sidebar__top">
 
@@ -70,7 +70,7 @@
                         <div class="sidebar__group">
                             <div class="sidebar__caption caption-sm"><span>Overview</span></div>
                             <div class="sidebar__menu">
-                                <a class="sidebar__item" href="overview1.html">
+                                <a class="sidebar__item" href="Home/overview1.html">
 
                                     <div class="sidebar__icon">
                                         <svg class="icon icon-overview">
@@ -92,28 +92,28 @@
 
                             <div class="sidebar__menu">
 
-                                <a class="sidebar__item  " href="monitor.html">
+                                <a class="sidebar__item  " href="Home/monitor.html">
                                     <div class="sidebar__icon"><svg class="icon icon-overview">
                                         <use xlink:href="../static/img/sprite.svg#icon-overview"></use>
                                     </svg></div>
                                     <div class="sidebar__text">站点趋势总览</div>
                                 </a>
 
-                                <a class="sidebar__item " href="detail1.html">
+                                <a class="sidebar__item " href="Home/detail1.html">
                                     <div class="sidebar__icon"><svg class="icon icon-bag">
                                         <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
                                     </svg></div>
                                     <div class="sidebar__text">位置流量趋势</div>
                                 </a>
 
-                                <a class="sidebar__item" href="other.html">
+                                <a class="sidebar__item" href="Home/other.html">
                                     <div class="sidebar__icon"><svg class="icon icon-bag">
                                         <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
                                     </svg></div>
                                     <div class="sidebar__text">健康评测总览</div>
                                 </a>
 
-                                <a class="sidebar__item" href="detail2.html">
+                                <a class="sidebar__item" href="Home/detail2.html">
                                     <div class="sidebar__icon"><svg class="icon icon-bag">
                                         <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
                                     </svg></div>
@@ -127,7 +127,7 @@
                             <div class="sidebar__caption caption-sm">工具</div>
                             <div class="sidebar__menu">
 
-                                <a class="sidebar__item active" href="userlist.html">
+                                <a class="sidebar__item" href="Home/userlist.html">
                                     <div class="sidebar__icon">
                                         <svg class="icon icon-message">
                                             <use xlink:href="../static/img/sprite.svg#icon-message"></use>
@@ -136,7 +136,7 @@
                                     <div class="sidebar__text">查询用户列表</div>
                                 </a>
 
-                                <a class="sidebar__item" href="userJourney.html">
+                                <a class="sidebar__item active" href="userJourney.html">
                                     <div class="sidebar__icon">
                                         <svg class="icon icon-message">
                                             <use xlink:href="../static/img/sprite.svg#icon-message"></use>
@@ -144,7 +144,7 @@
                                     </div>
                                     <div class="sidebar__text">查询用户旅程</div>
                                 </a>
-<a class="sidebar__item" href="userfeedback.html">
+<a class="sidebar__item" href="Home/userfeedback.html">
                   <div class="sidebar__icon">
                     <svg class="icon icon-message">
                       <use xlink:href="../static/img/sprite.svg#icon-message"></use>
@@ -152,7 +152,7 @@
                   </div>
                   <div class="sidebar__text">用户反馈</div>
                 </a>
-                                <a class="sidebar__item" href="errorDetect1.html">
+                                <a class="sidebar__item" href="Home/errorDetect1.html">
                                     <div class="sidebar__icon">
                                         <svg class="icon icon-notification">
                                             <use xlink:href="../static/img/sprite.svg#icon-notification"></use>
@@ -162,7 +162,7 @@
                                     <div class="sidebar__counter">3</div>
                                 </a>
 
-                                <a class="sidebar__item" href="satisfaction.html">
+                                <a class="sidebar__item" href="Home/satisfaction.html">
                                     <div class="sidebar__icon">
                                         <svg class="icon icon-chat">
                                             <use xlink:href="../static/img/sprite.svg#icon-chat"></use>
@@ -190,7 +190,7 @@
                             </a>
 
 
-                            <a class="sidebar__link" href="Sign_IN&UP.html">
+                            <a class="sidebar__link" href="Home/Sign_IN&UP.html">
                                 <div class="sidebar__icon">
                                     <svg class="icon icon-logout">
                                         <use xlink:href="../static/img/sprite.svg#icon-logout"></use>
@@ -237,8 +237,8 @@
 
           <!--标题-->
           <div class="page__col">
-            <div class="page__hello h5">用户列表</div>
-            <div class="page__welcome h2">Userlist</div>
+            <div class="page__hello h5">用户行程</div>
+            <div class="page__welcome h2">UserJourney</div>
           </div>
 
           <!--搜索栏-->
@@ -360,17 +360,11 @@
 
             <div class="notification">
 
-              <div class="notification__tags">
-                <a class="notification__tag active" href="#">用户</a>
-                <a class="notification__tag" href="#">设备</a>
-                <a class="notification__tag" href="#">管理员</a>
-              </div>
-
-              <div class="notification__container">
-                <div class="notification__title h6">用户列表</div>
-
+              <div class="page__content">
 
               </div>
+
+
             </div>
           </div>
 
@@ -385,10 +379,8 @@
                   <div class="filters__title h6">搜索</div>
 
                   <div class="filters__variants">
-                    <div class="field__wrap"><input id="tenantId" class="field__input" type="text" placeholder="组织id">
+                    <div class="field__wrap"><input id="usermac" class="field__input" type="text" placeholder="请输入用户mac">
                     </div></br>
-                    <div class="field__wrap"><input id="id" class="field__input" type="text" placeholder="请输入站点id"></div>
-                    </br>
                     <div class="field__wrap"><input id="startTime" class="field__input" type="text" placeholder="当前时间">
                     </div></br>
                   </div>
@@ -418,127 +410,108 @@
   <script src="../static/js/super.js"></script>
   <script src="../static/js/charts.js"></script>
 </body>
+<!--搜索-->
 <script>
   $(document).ready(function () {
     $("#startTime").val(new Date().toLocaleString() + ' 星期' + '日一二三四五六'.charAt(new Date().getDay()));
-    $("#tenantId").val('默认ID')
     //搜索 返回data加tenantId，id，startTime，endTime的类
     $("#search").click(function () {
-      $(".notification__container").empty();
-      var tenantId = $("#tenantId").val();
-      var id = $("#id").val();
+      $(".page__content").empty();
+      var usermac = $("#usermac").val();
       var startTime = $("#startTime").val();
       $.ajax({
-        url: "/UserListServlet",
+        url: "/getUserWay",
         data: {
-          "tenantId": tenantId,
-          "id": id,
+          "usermac": usermac,
           "startTime": startTime,
-          "currPage": 1,
-          "pageSize": 10
         },
         type: "POST",
         dataType: "json",
         success: function (data) {
 
-          var div = " <div class='notification__list'>";
-          $(data.tableData).each(function (index, item) {
-            div += " <div class=\"notification__item\">\n" +
-              "\n" +
-              "      <!--头像-->\n" +
-              "      <div class=\"notification__ava\"><img class=\"notification__pic\" src=\"img/ava-1.png\" alt=\"\" />\n" +
-              "        <!--头像上的状态图标-->\n" +
-              "        <div class=\"notification__status bg-blue\"><img class=\"notification__pic\" src=\"img/chat.svg\"\n" +
-              "                                                       alt=\"\" /></div>\n" +
-              "      </div>\n" +
-              "\n" +
-              "      <div class=\"notification__details\">\n" +
-              "        <!--用户名-->\n" +
-              "        <div class=\"notification__author title\">" + item.userName + "</div>\n" +
-              "\n" +
-              "        <!--用户基本信息-->\n" +
-              "        <div class=\"notification__line caption\">\n" +
-              "          <div class=\"notification__category\">普通用户</div>\n" +
-              "\n" +
-              "          <div class=\"notification__info\">MAC:</div>\n" +
-              "          <div class=\"notification__time\">" + item.userMac + "</div>\n" +
-              "\n" +
-              "          <div class=\"notification__info\"></div>\n" +
-              "\n" +
-              "          <div class=\"notification__info\">最近接入:</div>\n" +
-              "          <div class=\"notification__time\">" + item.lastJoinRes + "</div>\n" +
-              "        </div>\n" +
-              "\n" +
-              "        <!--四格数据-->\n" +
-              "        <div class=\"details__list details__list_four\" style=\"min-width: auto; max-height: auto;\">\n" +
-              "\n" +
-              "          <div class=\"details__item\">\n" +
-              "            <div class=\"details__head\">\n" +
-              "              <div class=\"details__preview bg-purple\"><img class=\"details__pic\" src=\"img/folder.svg\"\n" +
-              "                                                           alt=\"\">\n" +
-              "              </div>\n" +
-              "              <div class=\"details__text caption-sm\">平均速率</div>\n" +
-              "            </div>\n" +
-              "            <div class=\"details__counter h3\">" + item.rateAvg + "</div>\n" +
-              "            <div class=\"details__counter h6\">Mbps</div>\n" +
-              "            <div class=\"details__indicator\">\n" +
-              "              <div class=\"details__progress bg-purple\" style=\"width: 55%;\"></div>\n" +
-              "            </div>\n" +
-              "          </div>\n" +
-              "\n" +
-              "          <div class=\"details__item\">\n" +
-              "            <div class=\"details__head\">\n" +
-              "              <div class=\"details__preview bg-pink\"><img class=\"details__pic\" src=\"img/activity.svg\"\n" +
-              "                                                         alt=\"\">\n" +
-              "              </div>\n" +
-              "              <div class=\"details__text caption-sm\">延时</div>\n" +
-              "            </div>\n" +
-              "            <div class=\"details__counter h3\">" + item.latency + "</div>\n" +
-              "            <div class=\"details__counter h6\">ms</div>\n" +
-              "            <div class=\"details__indicator\">\n" +
-              "              <div class=\"details__progress bg-pink\" style=\"width: 52%;\"></div>\n" +
-              "            </div>\n" +
-              "          </div>\n" +
-              "\n" +
-              "          <div class=\"details__item\">\n" +
-              "            <div class=\"details__head\">\n" +
-              "              <div class=\"details__preview bg-blue\"><img class=\"details__pic\" src=\"img/bag.svg\" alt=\"\">\n" +
-              "              </div>\n" +
-              "              <div class=\"details__text caption-sm\">抖动</div>\n" +
-              "            </div>\n" +
-              "            <div class=\"details__counter h3\">" + Math.floor(Math.random() * 20 + 10) + "</div>\n" +
-              "            <div class=\"details__counter h6 \">次</div>\n" +
-              "            <div class=\"details__indicator\">\n" +
-              "              <div class=\"details__progress bg-blue\" style=\"width: 55%;\"></div>\n" +
-              "            </div>\n" +
-              "          </div>\n" +
-              "\n" +
-              "          <div class=\"details__item\">\n" +
-              "            <div class=\"details__head\">\n" +
-              "              <div class=\"details__preview bg-red\"><img class=\"details__pic\" src=\"img/chat.svg\" alt=\"\">\n" +
-              "              </div>\n" +
-              "              <div class=\"details__text caption-sm\">接入失败</div>\n" +
-              "            </div>\n" +
-              "            <div class=\"details__counter h3\">" + item.joinFailTimes + "</div>\n" +
-              "            <div class=\"details__counter h6 \">次</div>\n" +
-              "            <div class=\"details__indicator\">\n" +
-              "              <div class=\"details__progress bg-red\" style=\"width: 68%;\"></div>\n" +
-              "            </div>\n" +
-              "          </div>\n" +
-              "        </div>\n" +
-              "\n" +
-              "        <!--<div class=\"inbox__text\"> </div>-->\n" +
-              "\n" +
-              "      </div>\n" +
-              "\n" +
-              "    </div>"
+          var div ="  <div class=\"page__stat page__stat_pt32\">";
+          $(data.Jourtable).each(function (index, item) {
+            div += "<div class=\"products products_main\">\n" +
+                    "                    <div class=\"products__table\">\n" +
+                    "                      <div class=\"products__row products__row_head\">\n" +
+                    "                        <div class=\"products__cell\"><label class=\"checkbox\"><input class=\"checkbox__input\"\n" +
+                    "                              type=\"checkbox\"><span class=\"checkbox__in\"><span\n" +
+                    "                                class=\"checkbox__tick\"></span></span></label>\n" +
+                    "                        </div>\n" +
+                    "                        <div class=\"products__cell\"></div>\n" +
+                    "                        <div class=\"products__cell\">接入时间</div>\n" +
+                    "                        <div class=\"products__cell\">活跃时长</div>\n" +
+                    "                        <div class=\"products__cell\">NodeType</div>\n" +
+                    "                        <div class=\"products__cell\">KPI</div>\n" +
+                    "                      </div>\n" +
+                    "\n" +
+                    "\n" +
+                    "                      <div class=\"products__row\">\n" +
+                    "\n" +
+                    "                        <div class=\"products__cell\"><label class=\"checkbox\"><input class=\"checkbox__input\"\n" +
+                    "                              type=\"checkbox\"><span class=\"checkbox__in\"><span\n" +
+                    "                                class=\"checkbox__tick\"></span></span></label>\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "                        <div class=\"products__cell\">\n" +
+                    "                          <a class=\"products__item\" href=\"#\">\n" +
+                    "\n" +
+                    "                            <!-- <div class=\"products__preview\">\n" +
+                    "                              <img class=\"products__pic\" src=\"img/product-pic.png\" alt=\"\"> \n" +
+                    "                            </div> -->\n" +
+                    "\n" +
+                    "                            <div class=\"products__details\">\n" +
+                    "                              <div class=\"products__title title\">华为无线</div>\n" +
+                    "                              <div class=\"products__info caption color-gray\">c4-9e-d3-d2-d9-da</div>\n" +
+                    "                            </div>\n" +
+                    "                          </a>\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "                        <div class=\"products__cell\">\n" +
+                    "                          <div class=\"products__payment\">"+item.accTime+"</div>\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "\n" +
+                    "\n" +
+                    "                        <div class=\"products__cell\">\n" +
+                    "                          <div class=\"products__rating\"><span class=\"color-green\">"+item.huoyuetime+"</span>min</div>\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "                        <div class=\"products__cell\">\n" +
+                    "                          <div class=\"products__color\">\n" +
+                    "                            <div class=\"products__text\">"+item.situation+"</div>\n" +
+                    "                          </div>\n" +
+                    "                        </div>\n" +
+                    "\n" +
+                    "                        <div class=\"products__cell\">\n" +
+                    "                          <div class=\"products__cost\">\n" +
+                    "\n" +
+                    "                            <div class=\"products__color\">\n" +
+                    "                              <div class=\"products__bg\" style=\"background-color:"+item.color+";\"></div>\n" +
+                    "                              <div class=\"products__text\">"+item.pingjia+"</div>\n" +
+                    "                            </div>\n" +
+                    "\n" +
+                    "                            <div class=\"products__tooltip\">\n" +
+                    "                              <div class=\"products__sale\">\n" +
+                    "                                <div class=\"products__icon \" style=\"background-color:"+item.color+";\"><img class=\"products__pic\" src=\"img/chat-black.svg\"\n" +
+                    "                                    alt=\"\">\n" +
+                    "                                </div>\n" +
+                    "                                <div class=\"products__caption caption-sm\">体验卡</div>\n" +
+                    "                              </div>\n" +
+                    "                              <div class=\"products__price h6\">连接评分："+item.pingfen+"</div>\n" +
+                    "                              <div class=\"products__progress\"><span style=\"width: "+item.pingfen+"%;\"></span></div>\n" +
+                    "                            </div>\n" +
+                    "                          </div>\n" +
+                    "                        </div>\n" +
+                    "                      </div>\n" +
+                    "\n" +
+                    "                    </div>\n" +
+                    "                  </div>"
           });
-          div += "</div>";
-          $(".notification__container").append(div);
-          $("#tenantId").val(data.tenantId);
-          $("#id").val(data.id);
+          div += " <div class=\"products__more\"><button class=\"products__btn btn btn_black\">刷新</button></div>\n" + "</div>";
+          $(".page__content").append(div);
+          $("#usermac").val(data.usermac);
           $("#startTime").val(data.startTime);
-          $("#endTime").val(data.endTime);
         }
 
       });

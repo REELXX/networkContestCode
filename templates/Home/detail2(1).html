@@ -43,7 +43,7 @@
   <div class="page">
 
     <!--左边侧栏-->
-            <div class="sidebar">
+         <div class="sidebar">
 
             <div class="sidebar__top">
 
@@ -70,7 +70,7 @@
                         <div class="sidebar__group">
                             <div class="sidebar__caption caption-sm"><span>Overview</span></div>
                             <div class="sidebar__menu">
-                                <a class="sidebar__item" href="overview1.html">
+                                <a class="sidebar__item active" href="overview1.html">
 
                                     <div class="sidebar__icon">
                                         <svg class="icon icon-overview">
@@ -113,7 +113,7 @@
                                     <div class="sidebar__text">健康评测总览</div>
                                 </a>
 
-                                <a class="sidebar__item active" href="detail2.html">
+                                <a class="sidebar__item" href="detail2.html">
                                     <div class="sidebar__icon"><svg class="icon icon-bag">
                                         <use xlink:href="../static/img/sprite.svg#icon-bag"></use>
                                     </svg></div>
@@ -361,30 +361,26 @@
 
                 <div class="details__box" style="background-color: #fff;">
 
-                  <div class="details__title h5">上海</div>
+                  <div class="details__title h5">深圳</div>
                   <div class="details__chart details__chart_counter" style="height:300px;">
-                    <canvas id="htmlLegendsChart4"></canvas>
+                    <canvas id="htmlLegendsChart1"></canvas>
                   </div>
-
 
                   <div class="details__title h5">南京</div>
                   <div class="details__chart details__chart_counter" style="height:300px;">
                     <canvas id="htmlLegendsChart2"></canvas>
                   </div>
 
-                  <div class="details__title h5">深圳</div>
-                  <div class="details__chart details__chart_counter" style="height:300px;">
-                    <canvas id="htmlLegendsChart1"></canvas>
-                  </div>
-
-
-
                   <div class="details__title h5">杭州</div>
                   <div class="details__chart details__chart_counter" style="height:300px;">
                     <canvas id="htmlLegendsChart3"></canvas>
                   </div>
 
+                  <div class="details__title h5">上海</div>
+                  <div class="details__chart details__chart_counter" style="height:300px;">
 
+                    <canvas id="htmlLegendsChart4"></canvas>
+                  </div>
 
                 </div>
               </div>
@@ -414,6 +410,9 @@
   </div>
   </div>
 
+  <!--弹出窗口-->
+  <div class="popup mfp-hide" id="popup-settings">
+  </div>
 
   <!-- scripts-->
   <script src="../static/js/lib/jquery.min.js"></script>
@@ -436,7 +435,6 @@
   <script src="../static/js/lib/chart.min.js"></script>
 
 </body>
-
 <script>
   $(document).ready(function () {
     $.ajax({
@@ -476,41 +474,41 @@
         var myHtmlLegendsChart = new Chart(htmlLegendsChart, {
           type: 'line',
           data: {
-            labels: ['2021-07/21',
-              '2021-07/22',
-              '2021-07/23',
-              '2021-07/24',
-              '2021-07/25',
-              '2021-07/26',
-              '2021-07/27',
-              '2021-07/28',
-              '2021-07/29',
-              '2021-07/30',
-              '2021-08/01',
-              '2021-08/02',
-              '2021-08/03',
-              '2021-08/04',
-              '2021-08/05',
-              '2021-08/06',
-              '2021-08/07',
-              '2021-08/08',
-              '2021-08/09',
-              '2021-08/10',
-              '2021-08/11',
-              '2021-08/12',
-              '2021-08/13',
-              '2021-08/14',
-              '2021-08/15'],
+            labels: ['2021-06/21',
+              '2021-06/22',
+              '2021-06/23',
+              '2021-06/24',
+              '2021-06/25',
+              '2021-06/26',
+              '2021-06/27',
+              '2021-06/28',
+              '2021-06/29',
+              '2021-06/30',
+              '2021-07/01',
+              '2021-07/02',
+              '2021-07/03',
+              '2021-07/04',
+              '2021-07/05',
+              '2021-07/06',
+              '2021-07/07',
+              '2021-07/08',
+              '2021-07/09',
+              '2021-07/10',
+              '2021-07/11',
+              '2021-07/12',
+              '2021-07/13',
+              '2021-07/14',
+              '2021-07/15'],
             datasets: [{
-              label: "successCon",
-              borderColor: gradientStroke,
-              pointBackgroundColor: gradientStroke,
+              label: "coverage",
+              borderColor: gradientStroke2,
+              pointBackgroundColor: gradientStroke2,
               pointRadius: 0,
-              backgroundColor: gradientFill,
-              legendColor: '#177dff',
+              backgroundColor: gradientFill2,
+              legendColor: '#f3545d',
               fill: true,
               borderWidth: 1,
-              data: data.successcon[0]
+              data: data.cover[0]
             }, {
               label: "rate",
               borderColor: gradientStroke3,
@@ -521,6 +519,16 @@
               fill: true,
               borderWidth: 1,
               data: data.ratess[0]
+            }, {
+              label: "successCon",
+              borderColor: gradientStroke,
+              pointBackgroundColor: gradientStroke,
+              pointRadius: 0,
+              backgroundColor: gradientFill,
+              legendColor: '#177dff',
+              fill: true,
+              borderWidth: 1,
+              data: data.successcon[0]
             }, {
               label: "throughput",
               borderColor: "#ffeeff",
@@ -550,19 +558,7 @@
               fill: true,
               borderWidth: 1,
               data: [150]
-            },
-            {
-              label: "coverage",
-              borderColor: gradientStroke2,
-              pointBackgroundColor: gradientStroke2,
-              pointRadius: 0,
-              backgroundColor: gradientFill2,
-              legendColor: '#f3545d',
-              fill: true,
-              borderWidth: 1,
-              data: data.cover[0]
-            },
-            ]
+            }]
           },
           options: {
             responsive: true,
@@ -640,7 +636,8 @@
   });
 
 </script>
-<script>$(document).ready(function () {
+<script>
+  $(document).ready(function () {
     $.ajax({
       url: "/trend",
       data: {
@@ -678,31 +675,31 @@
         var myHtmlLegendsChart = new Chart(htmlLegendsChart, {
           type: 'line',
           data: {
-            labels: ['2021-07/21',
-              '2021-07/22',
-              '2021-07/23',
-              '2021-07/24',
-              '2021-07/25',
-              '2021-07/26',
-              '2021-07/27',
-              '2021-07/28',
-              '2021-07/29',
-              '2021-07/30',
-              '2021-08/01',
-              '2021-08/02',
-              '2021-08/03',
-              '2021-08/04',
-              '2021-08/05',
-              '2021-08/06',
-              '2021-08/07',
-              '2021-08/08',
-              '2021-08/09',
-              '2021-08/10',
-              '2021-08/11',
-              '2021-08/12',
-              '2021-08/13',
-              '2021-08/14',
-              '2021-08/15'],
+            labels: ['2021-06/21',
+              '2021-06/22',
+              '2021-06/23',
+              '2021-06/24',
+              '2021-06/25',
+              '2021-06/26',
+              '2021-06/27',
+              '2021-06/28',
+              '2021-06/29',
+              '2021-06/30',
+              '2021-07/01',
+              '2021-07/02',
+              '2021-07/03',
+              '2021-07/04',
+              '2021-07/05',
+              '2021-07/06',
+              '2021-07/07',
+              '2021-07/08',
+              '2021-07/09',
+              '2021-07/10',
+              '2021-07/11',
+              '2021-07/12',
+              '2021-07/13',
+              '2021-07/14',
+              '2021-07/15'],
             datasets: [{
               label: "coverage",
               borderColor: gradientStroke2,
@@ -839,7 +836,8 @@
     });
   });
 </script>
-<script>$(document).ready(function () {
+<script>
+  $(document).ready(function () {
     $.ajax({
       url: "/trend",
       data: {
@@ -877,42 +875,32 @@
         var myHtmlLegendsChart = new Chart(htmlLegendsChart, {
           type: 'line',
           data: {
-            labels: ['2021-07/21',
-              '2021-07/22',
-              '2021-07/23',
-              '2021-07/24',
-              '2021-07/25',
-              '2021-07/26',
-              '2021-07/27',
-              '2021-07/28',
-              '2021-07/29',
-              '2021-07/30',
-              '2021-08/01',
-              '2021-08/02',
-              '2021-08/03',
-              '2021-08/04',
-              '2021-08/05',
-              '2021-08/06',
-              '2021-08/07',
-              '2021-08/08',
-              '2021-08/09',
-              '2021-08/10',
-              '2021-08/11',
-              '2021-08/12',
-              '2021-08/13',
-              '2021-08/14',
-              '2021-08/15'],
+            labels: ['2021-06/21',
+              '2021-06/22',
+              '2021-06/23',
+              '2021-06/24',
+              '2021-06/25',
+              '2021-06/26',
+              '2021-06/27',
+              '2021-06/28',
+              '2021-06/29',
+              '2021-06/30',
+              '2021-07/01',
+              '2021-07/02',
+              '2021-07/03',
+              '2021-07/04',
+              '2021-07/05',
+              '2021-07/06',
+              '2021-07/07',
+              '2021-07/08',
+              '2021-07/09',
+              '2021-07/10',
+              '2021-07/11',
+              '2021-07/12',
+              '2021-07/13',
+              '2021-07/14',
+              '2021-07/15'],
             datasets: [{
-              label: "successCon",
-              borderColor: gradientStroke,
-              pointBackgroundColor: gradientStroke,
-              pointRadius: 0,
-              backgroundColor: gradientFill,
-              legendColor: '#177dff',
-              fill: true,
-              borderWidth: 1,
-              data: data.successcon[3]
-            }, {
               label: "coverage",
               borderColor: gradientStroke2,
               pointBackgroundColor: gradientStroke2,
@@ -932,6 +920,16 @@
               fill: true,
               borderWidth: 1,
               data: data.ratess[2]
+            }, {
+              label: "successCon",
+              borderColor: gradientStroke,
+              pointBackgroundColor: gradientStroke,
+              pointRadius: 0,
+              backgroundColor: gradientFill,
+              legendColor: '#177dff',
+              fill: true,
+              borderWidth: 1,
+              data: data.successcon[3]
             }, {
               label: "throughput",
               borderColor: "#ffeeff",
@@ -1039,7 +1037,8 @@
     });
   });
 </script>
-<script>$(document).ready(function () {
+<script>
+  $(document).ready(function () {
     $.ajax({
       url: "/trend",
       data: {
@@ -1077,31 +1076,31 @@
         var myHtmlLegendsChart = new Chart(htmlLegendsChart, {
           type: 'line',
           data: {
-            labels: ['2021-07/21',
-              '2021-07/22',
-              '2021-07/23',
-              '2021-07/24',
-              '2021-07/25',
-              '2021-07/26',
-              '2021-07/27',
-              '2021-07/28',
-              '2021-07/29',
-              '2021-07/30',
-              '2021-08/01',
-              '2021-08/02',
-              '2021-08/03',
-              '2021-08/04',
-              '2021-08/05',
-              '2021-08/06',
-              '2021-08/07',
-              '2021-08/08',
-              '2021-08/09',
-              '2021-08/10',
-              '2021-08/11',
-              '2021-08/12',
-              '2021-08/13',
-              '2021-08/14',
-              '2021-08/15'],
+            labels: ['2021-06/21',
+              '2021-06/22',
+              '2021-06/23',
+              '2021-06/24',
+              '2021-06/25',
+              '2021-06/26',
+              '2021-06/27',
+              '2021-06/28',
+              '2021-06/29',
+              '2021-06/30',
+              '2021-07/01',
+              '2021-07/02',
+              '2021-07/03',
+              '2021-07/04',
+              '2021-07/05',
+              '2021-07/06',
+              '2021-07/07',
+              '2021-07/08',
+              '2021-07/09',
+              '2021-07/10',
+              '2021-07/11',
+              '2021-07/12',
+              '2021-07/13',
+              '2021-07/14',
+              '2021-07/15'],
             datasets: [{
               label: "coverage",
               borderColor: gradientStroke2,
@@ -1478,5 +1477,256 @@
   };
   chart_9ad4f64b0b0c45638b323bef661ad98e.setOption(option_9ad4f64b0b0c45638b323bef661ad98e);
 </script>
+<!--初始用户信息-->
+<script>
+  $(document).ready(function () {
+    $.ajax({
+      url: "/getUserInfo",
+      data: {},
+      type: "POST",
+      dataType: "json",
+      success: function (data) {
+        $("#popup-settings").empty();
+        var yonghu = "<form class=\"popup__form\">\n" +
+                "\n" +
+                "\n" +
+                "        <div class=\"popup__user\">\n" +
+                "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
+                "            <div class=\"popup__title h2 \"></div>\n" +
+                "\n" +
+                "\n" +
+                "            <div class=\"popup__line\">\n" +
+                "\n" +
+                "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
+                "\n" +
+                "                <div class=\"popup__details\">\n" +
+                "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
+                "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
+                "                </div>\n" +
+                "            </div>\n" +
+                "        </div>\n" +
+                "\n" +
+                "        <div class=\"popup__fieldset\">\n" +
+                "\n" +
+                "            <div class=\"popup__row\">\n" +
+                "\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">用户名</div>\n" +
+                "                    <div class=\"popup__title h4 \">"+data.username+"</div>\n" +
+                "                </div>\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">绑定邮箱</div>\n" +
+                "                    <div class=\"popup__title h4 \">"+data.email+"</div>\n" +
+                "                </div>\n" +
+                "            </div>\n" +
+                "\n" +
+                "            <div class=\"popup__row\">\n" +
+                "\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">用户等级</div>\n" +
+                "                    <div class=\"popup__title h4 \">管理员</div>\n" +
+                "                </div>\n" +
+                "\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">最近登陆IP</div>\n" +
+                "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
+                "                </div>\n" +
+                "            </div>\n" +
+                "\n" +
+                "            <div class=\"popup__row\">\n" +
+                "\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">所属团体</div>\n" +
+                "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
+                "                </div>\n" +
+                "\n" +
+                "                <div class=\"popup__field field\">\n" +
+                "                    <div class=\"field__label\">账户安全等级</div>\n" +
+                "                    <div class=\"popup__title h4 \">优</div>\n" +
+                "\n" +
+                "                </div>\n" +
+                "\n" +
+                "            </div>\n" +
+                "            <div class=\"popup__btns\">\n" +
+                "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
+                "                <button class=\"popup__btn btn btn_gray\"  id=\"bianji\">编辑</button>\n" +
+                "            </div>\n" +
+                "    </form>";
+        $("#popup-settings").append(yonghu);
+      }
 
+    });
+  });
+</script>
+<!--开始修改-->
+<script>
+  $(document).ready(function () {
+
+    $("#popup-settings").on("click","#bianji",function () {
+      $.ajax({
+        url: "/getUserInfo",
+        data: {},
+        type: "POST",
+        dataType: "json",
+        success: function (data) {
+          $("#popup-settings").empty();
+          var yonghu = "<form class=\"popup__form\">\n" +
+                  "\n" +
+                  "\n" +
+                  "     <div class=\"popup__user\">\n" +
+                  "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
+                  "            <div class=\"popup__title h2 \"></div>\n" +
+                  "\n" +
+                  "\n" +
+                  "            <div class=\"popup__line\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__details\">\n" +
+                  "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
+                  "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "        </div>\n" +
+                  "\n" +
+                  "        <div class=\"popup__fieldset\">\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">用户名:</div>\n" +
+                  "                    <div class=\"popup__title h4 \"><input class='username' type='text'></div>\n" +
+                  "                </div>\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">绑定邮箱</div>\n" +
+                  "                    <div class=\"popup__title h4 \"><input class='email' type='text'></div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">用户等级</div>\n" +
+                  "                    <div class=\"popup__title h4 \">管理员</div>\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">最近登陆IP</div>\n" +
+                  "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">所属团体</div>\n" +
+                  "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">账户安全等级</div>\n" +
+                  "                    <div class=\"popup__title h4 \">优</div>\n" +
+                  "\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "            </div>\n" +
+                  "            <div class=\"popup__btns\">\n" +
+                  "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
+                  "                <button class=\"popup__btn btn btn_gray\" id=\"queding\">确定</button>\n" +
+                  "            </div>\n" +
+                  "    </form>";
+          $("#popup-settings").append(yonghu);
+        }
+      });
+
+
+    });
+  });
+</script>
+<!--确定修改-->
+<script>
+  $(document).ready(function () {
+
+    $("#popup-settings").on("click","#queding",function () {
+      var username=$(".username").val();
+      var email=$(".email").val();
+      $.ajax({
+        url: "/infoChange",
+        data: {username:username,
+          email:email},
+        type: "POST",
+        dataType: "json",
+        success: function (data) {
+          $("#popup-settings").empty();
+          var yonghu = "<form class=\"popup__form\">\n" +
+                  "\n" +
+                  "\n" +
+                  "     <div class=\"popup__user\">\n" +
+                  "            <div class=\"popup__title h2 \">Your Profile</div>\n" +
+                  "            <div class=\"popup__title h2 \"></div>\n" +
+                  "\n" +
+                  "\n" +
+                  "            <div class=\"popup__line\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__ava\"><img class=\"popup__pic\" src=\"static/img/ava.png\" alt=\"\"></div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__details\">\n" +
+                  "                    <div class=\"popup__title h1 \">"+data.username+"</div>\n" +
+                  "                    <div class=\"popup__text\">你的服务将在30天到期</div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "        </div>\n" +
+                  "\n" +
+                  "        <div class=\"popup__fieldset\">\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">用户名:</div>\n" +
+                  "                    <div class=\"popup__title h4 \">"+data.username+"</div>\n" +
+                  "                </div>\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">绑定邮箱</div>\n" +
+                  "                    <div class=\"popup__title h4 \">"+data.email+"</div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">用户等级</div>\n" +
+                  "                    <div class=\"popup__title h4 \">管理员</div>\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">最近登陆IP</div>\n" +
+                  "                    <div class=\"popup__title h4 \">"+data.IPdress+"</div>\n" +
+                  "                </div>\n" +
+                  "            </div>\n" +
+                  "\n" +
+                  "            <div class=\"popup__row\">\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">所属团体</div>\n" +
+                  "                    <div class=\"popup__title h4 \">开发团队</div>\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "                <div class=\"popup__field field\">\n" +
+                  "                    <div class=\"field__label\">账户安全等级</div>\n" +
+                  "                    <div class=\"popup__title h4 \">优</div>\n" +
+                  "\n" +
+                  "                </div>\n" +
+                  "\n" +
+                  "            </div>\n" +
+                  "            <div class=\"popup__btns\">\n" +
+                  "                <button class=\"popup__btn btn btn_purple\" type=\"submit\">续费</button>\n" +
+                  "                <button class=\"popup__btn btn btn_gray\" id=\"bianji\">编辑</button>\n" +
+                  "            </div>\n" +
+                  "    </form>";
+          $("#popup-settings").append(yonghu);
+        }
+      });
+    });
+  });
+</script>
 </html>

@@ -6,7 +6,7 @@ urlpatterns = [
     url(r'^trend',views.trendmap),
     url(r'^monitor',views.monitor),
     url(r'^other', views.other),
-
+    url(r'^errorDetect1',views.errorDetect1),
     url(r'^detail1',views.monitorDetail),
     url(r'^detail2', views.otherDetail),
     url(r'errorDetectInfo',views.errorDetectInfo),

@@ -65,7 +65,7 @@
                         <div class="sidebar__group">
                             <div class="sidebar__caption caption-sm"><span>Overview</span></div>
                             <div class="sidebar__menu">
-                                <a class="sidebar__item active" href="overview.html">
+                                <a class="sidebar__item active" href="overview1.html">
 
                                     <div class="sidebar__icon">
                                         <svg class="icon icon-overview">
@@ -147,7 +147,7 @@
                   </div>
                   <div class="sidebar__text">用户反馈</div>
                 </a>
-                                <a class="sidebar__item" href="errorDetect.html">
+                                <a class="sidebar__item" href="errorDetect1.html">
                                     <div class="sidebar__icon">
                                         <svg class="icon icon-notification">
                                             <use xlink:href="../static/img/sprite.svg#icon-notification"></use>
@@ -524,7 +524,7 @@
                         if(data.url){
                             window.location.href = data.url
                         }
-                        if(data.AI=="郑林昕"){
+                        if(data.AI=="我"){
                             var zhineng = "<div class=\"speak__user caption\">郑林昕的满意度较差</div>\n" ;
                             $(".speak__item").append(zhineng);
                         }
@@ -561,7 +561,7 @@
                         if(data.url){
                             window.location.href = data.url
                         }
-                        if(data.AI=="郑林昕"){
+                        if(data.AI=="我"){
                             var zhineng = "<div class=\"speak__user caption\">郑林昕的满意度较差</div>\n" ;
                             $(".speak__item").append(zhineng);
                         }
@@ -844,5 +844,11 @@
         });
     }
 </script>
+<script type="text/javascript" src="https://bots.4paradigm.com/web/assets/ics-web-sdk-js.js"></script>
 
+<script type="text/javascript">
+
+IcsWebSdkJs.init('https://bots.4paradigm.com/web/chat/30222/a5072d32-8ddb-439d-8849-977d54dcb290')
+
+</script>
 </html>
